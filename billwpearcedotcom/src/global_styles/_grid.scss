@@ -1,0 +1,52 @@
+.grid-wrapper {
+}
+
+.grid {
+  display: grid;
+  align-content: center;
+
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+
+  gap: 1rem;
+}
+
+.grid-item {
+  height: auto;
+  padding: 1rem;
+
+  color: white;
+  background-color: red;
+}
+
+@media (min-width: 600px) {
+  .grid {
+    justify-content: normal;
+
+    width: 90vw;
+  }
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.row {
+  display: flex;
+
+  max-width: 1200px;
+  margin: 0 auto;
+
+  gap: 1rem;
+}
+
+.row-item {
+  height: 4rem;
+  padding: 1rem;
+
+  color: white;
+  background-color: red;
+}
