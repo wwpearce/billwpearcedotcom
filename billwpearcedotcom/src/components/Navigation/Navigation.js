@@ -11,19 +11,10 @@ const Navigation = ({ isScrolled }) => {
   return (
     <nav className={`sticky-nav ${isNavVisible ? "visible" : ""}`}>
         <div className="nav-item">
-          <h1>about</h1>
-        </div>
-        <div className="nav-item">
-          <h1>services</h1>
+          <h1>burger</h1>
         </div>
         <div className="nav-item">
           <h1>logo</h1>
-        </div>
-        <div className="nav-item">
-          <h1>about</h1>
-        </div>
-        <div className="nav-item">
-          <h1>services</h1>
         </div>
     </nav>
   );

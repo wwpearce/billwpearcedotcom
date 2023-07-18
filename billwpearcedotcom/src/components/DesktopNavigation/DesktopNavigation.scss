@@ -1,17 +1,29 @@
 .sticky-nav {
   position: fixed;
+  z-index: 9999;
   top: 0;
   left: 0;
+
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+
   width: 100%;
-  background-color: #ffffff;
   padding: 10px;
-  z-index: 9999;
+
   transition: all 0.3s;
-  pointer-events: none;
   transform: translate3d(0, -20vh, 0);
+  pointer-events: none;
+
+  background-color: #ffffff;
 
   &.visible {
-    pointer-events: auto;
     transform: translate3d(0, 0, 0);
+    pointer-events: auto;
   }
+}
+
+.active-scroll-spy {
+  background-color: yellowgreen;
+  border-radius: 15px;
 }

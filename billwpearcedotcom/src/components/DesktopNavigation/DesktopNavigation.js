@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./DesktopNavigation.scss";
+import ScrollSpy from "react-ui-scrollspy";
 
-const Navigation = ({ isScrolled }) => {
+
+const DesktopNavigation = ({ isScrolled }) => {
   const [isNavVisible, setIsNavVisible] = useState(false);
 
   useEffect(() => {
@@ -10,25 +12,23 @@ const Navigation = ({ isScrolled }) => {
 
   return (
     <nav className={`sticky-nav ${isNavVisible ? "visible" : ""}`}>
-      <ul>
-        <li>
-          <h1>about</h1>
-        </li>
-        <li>
-          <h1>services</h1>
-        </li>
-        <li>
+        <div className="nav-item">
+          <p data-to-scrollspy-id="second">about</p>
+        </div>
+        <div className="nav-item">
+        <h1 data-to-scrollspy-id="third">services</h1>
+        </div>
+        <div className="nav-item">
           <h1>logo</h1>
-        </li>
-        <li>
-          <h1>about</h1>
-        </li>
-        <li>
-          <h1>services</h1>
-        </li>
-      </ul>
+        </div>
+        <div className="nav-item">
+        <h1 data-to-scrollspy-id="fourth">portfolio</h1>
+        </div>
+        <div className="nav-item">
+        <h1>contact</h1>
+        </div>
     </nav>
   );
 };
 
-export default Navigation;
+export default DesktopNavigation;

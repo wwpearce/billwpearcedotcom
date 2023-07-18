@@ -1,6 +1,6 @@
 import './Screen.scss';
 
-const Screen = ({ backgroundColor, layoutType, className, children }) => {
+const Screen = ({ backgroundColor, layoutType, className, id, children }) => {
   const containerStyle = {
     backgroundColor: backgroundColor || '#ffffff',
     height: '101vh',
@@ -13,7 +13,7 @@ const Screen = ({ backgroundColor, layoutType, className, children }) => {
   const screenClassName = `screen ${className}`;
 
   return (
-    <div className={screenClassName} style={containerStyle}>
+    <div className={screenClassName} id = {id} style={containerStyle}>
       {children}
     </div>
   );
