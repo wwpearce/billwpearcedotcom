@@ -1,8 +1,8 @@
 import './Card.scss';
 
-const Card = ({ headline, bodyCopy }) => {
+const Card = ({ headline, bodyCopy, isMiddle }) => {
   return (
-    <div className="card">
+    <div className={`Card ${isMiddle ? 'middle' : ''}`}>
       <h2 className="card-headline">{headline}</h2>
       <p className="card-body">{bodyCopy}</p>
     </div>

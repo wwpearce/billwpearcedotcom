@@ -3,7 +3,7 @@ import './Screen.scss';
 const Screen = ({ backgroundColor, layoutType, className, children }) => {
   const containerStyle = {
     backgroundColor: backgroundColor || '#ffffff',
-    height: '110vh',
+    height: '101vh',
     width: '100vw',
     display: 'flex',
     justifyContent: layoutType === 'center' ? 'center' : 'flex-start',

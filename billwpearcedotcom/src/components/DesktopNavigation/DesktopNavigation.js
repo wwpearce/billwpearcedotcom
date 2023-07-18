@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Navigation.scss";
+import "./DesktopNavigation.scss";
 
 const Navigation = ({ isScrolled }) => {
   const [isNavVisible, setIsNavVisible] = useState(false);
@@ -10,21 +10,23 @@ const Navigation = ({ isScrolled }) => {
 
   return (
     <nav className={`sticky-nav ${isNavVisible ? "visible" : ""}`}>
-        <div className="nav-item">
+      <ul>
+        <li>
           <h1>about</h1>
-        </div>
-        <div className="nav-item">
+        </li>
+        <li>
           <h1>services</h1>
-        </div>
-        <div className="nav-item">
+        </li>
+        <li>
           <h1>logo</h1>
-        </div>
-        <div className="nav-item">
+        </li>
+        <li>
           <h1>about</h1>
-        </div>
-        <div className="nav-item">
+        </li>
+        <li>
           <h1>services</h1>
-        </div>
+        </li>
+      </ul>
     </nav>
   );
 };

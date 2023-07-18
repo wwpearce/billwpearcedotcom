@@ -1,0 +1,28 @@
+@import "../../global_styles/variables";
+
+.grid {
+  display: grid;
+  align-content: center;
+
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+
+  gap: 1rem;
+}
+
+@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+
+    justify-content: normal;
+
+    width: 90vw;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
