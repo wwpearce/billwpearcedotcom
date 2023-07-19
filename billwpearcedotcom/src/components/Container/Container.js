@@ -10,6 +10,9 @@ import DesktopNavigation from "../DesktopNavigation/DesktopNavigation";
 import Card from "../Card/Card";
 import Grid from "../Grid/Grid";
 import GridItem from "../GridItem/GridItem";
+import Portfolio from "../Portfolio/Portfolio";
+
+import { ReactComponent as Logo } from '../../img/logo.svg';
 
 function Container() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,20 +40,20 @@ function Container() {
         <Navigation isScrolled={isScrolled} />
       </MobileView>
       <div className={`inner-wrapper ${isScrolled ? "scrolled" : ""}`}>
-        <ScrollSpy>
+        <ScrollSpy offsetTop={0} useBoxMethod={false}>
           <Screen
             backgroundColor="#fff"
             layoutType="center"
             className="Screen white splash"
-            id="first"
+            id="zero"
           >
-            <Card headline="Splash" bodyCopy="bodycopy" />
+            <Logo />
           </Screen>
           <Screen
             backgroundColor="#000"
             layoutType="center"
             className="Screen black about"
-            id="second"
+            id="first"
           >
             <Card headline="About" bodyCopy="bodycopy" />
           </Screen>
@@ -58,7 +61,7 @@ function Container() {
             backgroundColor="#fff"
             layoutType="center"
             className="Screen white services"
-            id="third"
+            id="second"
           >
             <Grid>
               <GridItem>
@@ -76,9 +79,9 @@ function Container() {
             backgroundColor="#000"
             layoutType="center"
             className="Screen black portfolio"
-            id="fourth"
+            id="third"
           >
-            <Card headline="Portfolio" bodyCopy="bodycopy" />
+            <Portfolio />
           </Screen>
         </ScrollSpy>
       </div>

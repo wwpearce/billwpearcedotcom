@@ -1,6 +1,6 @@
 .sticky-nav {
   position: fixed;
-  z-index: 9999;
+  z-index: 1;
   top: 0;
   left: 0;
 
@@ -23,7 +23,28 @@
   }
 }
 
+.data-to-scrollspy {
+  // transform: scale(1);
+  // transition: all 0.3s ease-out;
+}
+
 .active-scroll-spy {
-  background-color: yellowgreen;
-  border-radius: 15px;
+  // transform: scale(1.1);
+  // border-bottom: 2px solid black;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  svg {
+    width: auto;
+    height: 20px;
+  }
+}
+
+.nav-item.logo {
+  svg {
+    width: 200px;
+    height: auto;
+  }
 }
