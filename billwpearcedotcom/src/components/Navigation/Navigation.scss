@@ -1,4 +1,4 @@
-.sticky-nav {
+.mobile-sticky-nav {
   position: fixed;
   z-index: 1;
   top: 0;
@@ -6,7 +6,7 @@
 
   display: flex;
   align-content: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
   width: 100%;
   padding: 10px;
@@ -20,5 +20,11 @@
   &.visible {
     transform: translate3d(0, 0, 0);
     pointer-events: auto;
+  }
+  .nav-item {
+    svg {
+      width: auto;
+height: 50px;
+    }
   }
 }

@@ -7,12 +7,11 @@ import "./Container.scss";
 import Screen from "../Screen/Screen";
 import Navigation from "../Navigation/Navigation";
 import DesktopNavigation from "../DesktopNavigation/DesktopNavigation";
-import Card from "../Card/Card";
-import Grid from "../Grid/Grid";
-import GridItem from "../GridItem/GridItem";
 import Portfolio from "../Portfolio/Portfolio";
+import About from "../About/About";
+import Services from "../Services/Services";
 
-import { ReactComponent as Logo } from '../../img/logo.svg';
+import { ReactComponent as Hero } from '../../img/SVG_hero-1.svg';
 
 function Container() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,7 +20,7 @@ function Container() {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const viewportHeight = window.innerHeight;
-      setIsScrolled(scrollPosition >= viewportHeight);
+      setIsScrolled(scrollPosition > 0);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -40,14 +39,14 @@ function Container() {
         <Navigation isScrolled={isScrolled} />
       </MobileView>
       <div className={`inner-wrapper ${isScrolled ? "scrolled" : ""}`}>
-        <ScrollSpy offsetTop={0} useBoxMethod={false}>
+        <ScrollSpy offsetTop={50} useBoxMethod={false}>
           <Screen
             backgroundColor="#fff"
             layoutType="center"
             className="Screen white splash"
             id="zero"
           >
-            <Logo />
+            <Hero className="hero-svg" />
           </Screen>
           <Screen
             backgroundColor="#000"
@@ -55,7 +54,7 @@ function Container() {
             className="Screen black about"
             id="first"
           >
-            <Card headline="About" bodyCopy="bodycopy" />
+            <About />
           </Screen>
           <Screen
             backgroundColor="#fff"
@@ -63,17 +62,7 @@ function Container() {
             className="Screen white services"
             id="second"
           >
-            <Grid>
-              <GridItem>
-                <Card headline="service" bodyCopy="service copy" />
-              </GridItem>
-              <GridItem isMiddle>
-                <Card headline="service" bodyCopy="service copy" />
-              </GridItem>
-              <GridItem>
-                <Card headline="service" bodyCopy="service copy" />
-              </GridItem>
-            </Grid>
+            <Services />
           </Screen>
           <Screen
             backgroundColor="#000"

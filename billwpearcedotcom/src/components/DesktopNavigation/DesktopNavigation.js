@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./DesktopNavigation.scss";
 
-import { ReactComponent as Logo } from '../../img/logo.svg';
+import { ReactComponent as Logo } from '../../img/SVG_umbrella.svg';
 
 import { ReactComponent as AboutSVG } from '../../img/about.svg';
 import { ReactComponent as ContactSVG } from '../../img/contact.svg';

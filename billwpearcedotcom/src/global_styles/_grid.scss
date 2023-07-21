@@ -31,3 +31,9 @@
 //     grid-template-columns: repeat(3, 1fr);
 //   }
 // }
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    width: 66vw;
+}

@@ -1,0 +1,74 @@
+@import '../../global_styles/_variables.scss';
+
+.Services {
+    height: auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-row {
+    display: flex;
+    justify-content: space-between;
+    width: 66vw;
+}
+
+.services-svg {
+    width: 100%;
+}
+
+.services-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.services-inner-wrapper {
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-headings-svg {
+    height: 5vh;
+}
+
+.card {
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-content: center;
+width: 100%;
+}
+
+@media (min-width: $mobile-width) {
+    .Services {}
+
+    .services-wrapper {
+        width: 66vw;
+    }
+
+    .services-inner-wrapper {
+        flex-direction: row;
+
+        align-items: flex-start;
+
+    }
+    .services-row {
+        width: 100vw;
+    }
+
+    .services-svg {
+        width: 33vw;
+    }
+
+    .card {
+        width: auto;
+min-width: 300px;
+    }
+
+}
