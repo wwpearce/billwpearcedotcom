@@ -11,7 +11,7 @@ import Portfolio from "../Portfolio/Portfolio";
 import About from "../About/About";
 import Services from "../Services/Services";
 
-import { ReactComponent as Hero } from '../../img/SVG_hero-1.svg';
+import { ReactComponent as Hero } from '../../img/hero.svg';
 
 function Container() {
   const [isScrolled, setIsScrolled] = useState(false);

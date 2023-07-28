@@ -34,12 +34,12 @@
       .drop:nth-of-type(7) {
         animation-delay: 3s;
       }
-<!-- 
+
       .letter {
         stroke-dasharray: 1000;
         stroke-dashoffset: 1000;
         animation: draw 3s ease-in-out forwards;
-      } -->
+      }
 
       .letter-b {
       animation-delay: 0s;
