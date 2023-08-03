@@ -8,15 +8,26 @@ const TextDisplay = () => {
     return (
         <div className='About'>
             <div className='copy-wrapper'>
-            <h2>Here is my professional life, in bullet form:</h2>
+            <h2>Hi! It's me, Bill!</h2>
             <br />
+            <p>
+            I’ve been a creative professional for over twenty years, wearing many different hats (not literally; I don’t like hats) including designer, illustrator, creative director, creative technologist, and front-end developer.
+            </p>
+            <h3>I've done this for a <span>long time</span></h3>
             <ul className='about-list'>
-                <li>20 years of experience in design, illustration, and front-end development (read: Photoshop 7, Illustrator 10, and Notepad++)</li>
-                <li>Senior level titles in design, front-end development, and creative technology at Code and Theory, Amazon, Publicis, and Goldman Sachs while maintaining a freelance design and illustration practice</li>
-                <li>I’ve done every project under the sun: the regular stuff (logos, websites, ads, merch), the big stuff (enterprise level applications, Amazon.com), the weird stuff (Arduino, Alexa)</li>
-                <li>Steady hand: pushed code to the fourth most-visited website on the internet (done a few public speaking engagements too)</li>
-                <li>Always optimizing: my job at GS was to optimize a design team through tooling and process</li>
-                <li>Industries include advertising, fintech, design consulting, creative services, blah blah</li>
+                <li>I remember when Notepad ++ came out</li>
+                <li>When I first used Photoshop it was on version 8</li>
+                <li>My first website was in Flash</li>
+            </ul>
+            <h3>I've done this for some <span>big names</span></h3>
+            <ul className='about-list'>
+                <li>I worked at Amazon and pushed code to the fourth most visited website on the internet</li>
+                <li>Other clients and employers include Publicis Group, Goldman Sachs, Code & Theory, DC Comics, WWE, etc.</li>
+            </ul>
+            <p></p>
+            <ul className='about-list'>
+                <li>Tea Lady - Creative Director</li>
+                <li>Secret Football Club - Contributing Designer (and striker)</li>
             </ul>
             </div>
             <MeSVG />

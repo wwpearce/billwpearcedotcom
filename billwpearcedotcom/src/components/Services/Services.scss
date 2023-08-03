@@ -39,10 +39,10 @@
 
 .card {
     display: flex;
-flex-direction: column;
-justify-content: center;
-align-content: center;
-width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
 }
 
 @media (min-width: $mobile-width) {
@@ -58,6 +58,7 @@ width: 100%;
         align-items: flex-start;
 
     }
+
     .services-row {
         width: 100vw;
     }
@@ -68,7 +69,52 @@ width: 100%;
 
     .card {
         width: auto;
-min-width: 300px;
+        min-width: 300px;
     }
 
+}
+
+.services-letter {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    // animation: services-draw 3s ease-in-out forwards;
+  }
+
+  #second.scrolled {
+    .services-letter {
+      animation: services-draw 3s ease-in-out forwards;
+    }
+  }
+
+  .services-letter:nth-of-type(1) {
+    animation-delay: 0;
+  }
+
+  .services-letter:nth-of-type(2) {
+    animation-delay: 0.5s;
+  }
+
+  .services-letter:nth-of-type(3) {
+    animation-delay: 1s;
+  }
+
+  .services-letter:nth-of-type(4) {
+    animation-delay: 1.5s;
+  }
+
+  .services-letter:nth-of-type(5) {
+    animation-delay: 2s;
+  }
+
+  .services-letter:nth-of-type(6) {
+    animation-delay: 2.5s;
+  }
+
+  @keyframes services-draw {
+  0% {
+  stroke-dashoffset: 1000;
+  }
+  100% {
+  stroke-dashoffset: 0;
+  }
 }

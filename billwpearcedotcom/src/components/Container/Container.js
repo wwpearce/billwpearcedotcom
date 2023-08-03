@@ -15,11 +15,14 @@ import { ReactComponent as Hero } from '../../img/hero.svg';
 
 function Container() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const handleHeroLoad = () => {
+    // console.log("Hero component has loaded");
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const viewportHeight = window.innerHeight;
+      // const viewportHeight = window.innerHeight;
       setIsScrolled(scrollPosition > 0);
     };
 
@@ -30,6 +33,17 @@ function Container() {
     };
   }, []);
 
+  const handleUpdateCallback = (e) => {
+    // if (e && e !== 'null') {
+      const element = document.querySelector(`#${e}`);
+      console.log(element);
+      // if (element) {
+        element.classList.add('scrolled');
+      // }
+    // }
+
+  };
+
   return (
     <div className={`Container ${isScrolled ? "scrolled" : ""}`}>
       <BrowserView>
@@ -39,14 +53,19 @@ function Container() {
         <Navigation isScrolled={isScrolled} />
       </MobileView>
       <div className={`inner-wrapper ${isScrolled ? "scrolled" : ""}`}>
-        <ScrollSpy offsetTop={50} useBoxMethod={false}>
+        <ScrollSpy
+          offsetTop={50} 
+          useBoxMethod={false} 
+          scrolledPastClassName={'scrolled'} 
+          onUpdateCallback={handleUpdateCallback}
+          >
           <Screen
             backgroundColor="#fff"
             layoutType="center"
             className="Screen white splash"
             id="zero"
           >
-            <Hero className="hero-svg" />
+            <Hero className="hero-svg" onLoad={handleHeroLoad()} />
           </Screen>
           <Screen
             backgroundColor="#000"

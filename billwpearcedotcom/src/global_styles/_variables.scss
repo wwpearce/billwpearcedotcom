@@ -6,3 +6,6 @@ $white: #ffffff;
 $mobile-width: 600px;
 $tablet-width: 900px;
 $desktop-width: 1024px;
+
+$easeInCirc: cubic-bezier(0.55, 0, 1, 0.45);
+$easeOutCirc: cubic-bezier(0, 0.55, 0.45, 1);
