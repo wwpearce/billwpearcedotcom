@@ -5,9 +5,9 @@ import './Container.scss';
 
 import Screen from '../Screen/Screen';
 import Navigation from '../Navigation/Navigation';
-import Portfolio from '../Portfolio/Portfolio';
-import About from '../About/About';
-import Services from '../Services/Services';
+import Portfolio from '../../views/Portfolio/Portfolio';
+import About from '../../views/About/About';
+import Services from '../../views/Services/Services';
 
 import { ReactComponent as Hero } from '../../img/hero.svg';
 

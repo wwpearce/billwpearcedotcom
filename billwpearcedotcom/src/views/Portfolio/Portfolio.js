@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Portfolio.scss'; // Import your CSS styles for Portfolio component
-import Modal from '../Modal/Modal';
+import Modal from '../../components/Modal/Modal';
 
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -12,25 +12,31 @@ const Portfolio = () => {
       id: 1,
       title: 'Project 1',
       description: 'Description for Project 1',
-      imageUrl: 'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
+      imageUrl:
+        'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
       tags: ['Tag1', 'Tag2'],
     },
     {
       id: 2,
       title: 'Project 2',
       description: 'Description for Project 2',
-      imageUrl: 'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
+      imageUrl:
+        'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
       tags: ['Tag2', 'Tag3'],
     },
     // Add more projects with tags as needed
   ];
 
   // Create a set of unique tags from the projects
-  const allTags = new Set(projects.flatMap((project) => project.tags));
+  const allTags = new Set(
+    projects.flatMap((project) => project.tags)
+  );
 
   // Filter the projects based on selected tags
   const filteredProjects = selectedTags.size
-    ? projects.filter((project) => project.tags.some((tag) => selectedTags.has(tag)))
+    ? projects.filter((project) =>
+        project.tags.some((tag) => selectedTags.has(tag))
+      )
     : projects;
 
   const handleProjectClick = (project) => {
@@ -57,7 +63,9 @@ const Portfolio = () => {
         {Array.from(allTags).map((tag) => (
           <button
             key={tag}
-            className={`tag ${selectedTags.has(tag) ? 'selected' : ''}`}
+            className={`tag ${
+              selectedTags.has(tag) ? 'selected' : ''
+            }`}
             onClick={() => toggleTag(tag)}
           >
             {tag}
@@ -66,13 +74,23 @@ const Portfolio = () => {
       </div>
       <div className="portfolio-grid">
         {filteredProjects.map((project) => (
-          <div key={project.id} className="project-card" onClick={() => handleProjectClick(project)}>
+          <div
+            key={project.id}
+            className="project-card"
+            onClick={() => handleProjectClick(project)}
+          >
             <img src={project.imageUrl} alt={project.title} />
             <h3>{project.title}</h3>
           </div>
         ))}
       </div>
-      {selectedProject && <Modal project={selectedProject} closeModal={closeModal} isOpen={!!selectedProject} />}
+      {selectedProject && (
+        <Modal
+          project={selectedProject}
+          closeModal={closeModal}
+          isOpen={!!selectedProject}
+        />
+      )}
     </div>
   );
 };

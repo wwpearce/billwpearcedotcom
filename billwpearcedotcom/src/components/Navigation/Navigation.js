@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { isMobile } from 'react-device-detect';
 import Hamburger from 'hamburger-react';
 
+import FullScreenMenu from '../FullScreenMenu/FullScreenMenu';
+
 import './Navigation.scss';
 
 import { ReactComponent as Logo } from '../../img/SVG_umbrella.svg';
@@ -14,6 +16,10 @@ import { ReactComponent as ServicesSVG } from '../../img/services.svg';
 const Navigation = ({ isScrolled }) => {
   const [isNavVisible, setIsNavVisible] = useState(false);
   const [isOpen, setOpen] = useState(false);
+
+  const toggleOpen = (isOpen) => {
+    return !isOpen;
+  };
 
   useEffect(() => {
     setIsNavVisible(isScrolled);
@@ -47,6 +53,15 @@ const Navigation = ({ isScrolled }) => {
               <Logo />
             </div>
           </nav>
+          <FullScreenMenu
+            toggleOpen={toggleOpen}
+            isOpen={isOpen}
+            AboutSVG={AboutSVG}
+            ContactSVG={ContactSVG}
+            PortfolioSVG={PortfolioSVG}
+            ServicesSVG={ServicesSVG}
+            onPress={onPress}
+          />
         </div>
       )}
       {!isMobile && (
