@@ -1,71 +1,57 @@
-import React, { useState, useEffect } from "react";
-import { BrowserView, MobileView } from "react-device-detect";
-import ScrollSpy from "react-ui-scrollspy";
+import React, { useState, useEffect } from 'react';
+import ScrollSpy from 'react-ui-scrollspy';
 
-import "./Container.scss";
+import './Container.scss';
 
-import Screen from "../Screen/Screen";
-import Navigation from "../Navigation/Navigation";
-import DesktopNavigation from "../DesktopNavigation/DesktopNavigation";
-import Portfolio from "../Portfolio/Portfolio";
-import About from "../About/About";
-import Services from "../Services/Services";
+import Screen from '../Screen/Screen';
+import Navigation from '../Navigation/Navigation';
+import Portfolio from '../Portfolio/Portfolio';
+import About from '../About/About';
+import Services from '../Services/Services';
 
 import { ReactComponent as Hero } from '../../img/hero.svg';
 
 function Container() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const handleHeroLoad = () => {
-    // console.log("Hero component has loaded");
-  };
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      // const viewportHeight = window.innerHeight;
       setIsScrolled(scrollPosition > 0);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   const handleUpdateCallback = (e) => {
-    // if (e && e !== 'null') {
-      const element = document.querySelector(`#${e}`);
-      console.log(element);
-      // if (element) {
-        element.classList.add('scrolled');
-      // }
-    // }
-
+    const element = document.querySelector(`#${e}`);
+    console.log(element);
+    element.classList.add('scrolled');
   };
 
   return (
-    <div className={`Container ${isScrolled ? "scrolled" : ""}`}>
-      <BrowserView>
-        <DesktopNavigation isScrolled={isScrolled} />
-      </BrowserView>
-      <MobileView>
-        <Navigation isScrolled={isScrolled} />
-      </MobileView>
-      <div className={`inner-wrapper ${isScrolled ? "scrolled" : ""}`}>
+    <div className={`Container ${isScrolled ? 'scrolled' : ''}`}>
+      <Navigation isScrolled={isScrolled} />
+      <div
+        className={`inner-wrapper ${isScrolled ? 'scrolled' : ''}`}
+      >
         <ScrollSpy
-          offsetTop={50} 
-          useBoxMethod={false} 
-          scrolledPastClassName={'scrolled'} 
+          offsetTop={50}
+          useBoxMethod={false}
+          scrolledPastClassName={'scrolled'}
           onUpdateCallback={handleUpdateCallback}
-          >
+        >
           <Screen
             backgroundColor="#fff"
             layoutType="center"
             className="Screen white splash"
             id="zero"
           >
-            <Hero className="hero-svg" onLoad={handleHeroLoad()} />
+            <Hero className="hero-svg" />
           </Screen>
           <Screen
             backgroundColor="#000"

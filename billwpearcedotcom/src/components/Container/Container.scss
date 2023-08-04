@@ -8,32 +8,26 @@
   height: 400vh;
   display: flex;
   flex-direction: column;
-  .inner-wrapper {
-    // transform: translate3d(0, 0, 0);
-    // transition: all 0.2s;
+  .Screen {
+    position: relative;
+    height: 100%;
   }
-  &.scrolled {
-    .inner-wrapper {
-      // transform: translate3d(0, 30px, 0);
+
+  .Screen.splash {
+      .hero-svg {
+        width: 550px;
+      }
+
+      @media (min-width: 600px) {
+        .hero-svg {
+          width: 550px;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .hero-svg {
+          width: 650px;
+        }
+      }
     }
-  }
-}
-
-.screen {
-  position: relative;
-  height: 100%;
-}
-
-.splash {
-  // background-image: url('../../img/repeat.png');
-}
-
-.hero-svg {
-  max-height: 500px;
-}
-
-@media (max-width: 600px) {
-  .hero-svg {
-    width: 550px;
-  }
 }

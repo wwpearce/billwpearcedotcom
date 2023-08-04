@@ -1,3 +1,55 @@
+.desktop-sticky-nav {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+
+  width: 100%;
+  padding: 10px;
+
+  transition: all 0.3s;
+  transform: translate3d(0, -20vh, 0);
+  pointer-events: none;
+
+  background-color: #ffffff;
+  border-bottom: 1px solid #777777;
+
+  &.visible {
+    transform: translate3d(0, 0, 0);
+    pointer-events: auto;
+  }
+}
+
+.data-to-scrollspy {
+  // transform: scale(1);
+  // transition: all 0.3s ease-out;
+}
+
+.active-scroll-spy {
+  // transform: scale(1.1);
+  // border-bottom: 2px solid black;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  svg {
+    width: auto;
+    height: 20px;
+  }
+}
+
+.nav-item.logo {
+  svg {
+    width: 75px;
+    height: auto;
+  }
+}
+
 .mobile-sticky-nav {
   position: fixed;
   z-index: 1;
