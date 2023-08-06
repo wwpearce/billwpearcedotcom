@@ -1,6 +1,12 @@
 import './Screen.scss';
 
-const Screen = ({ backgroundColor, layoutType, className, id, children }) => {
+const Screen = ({
+  backgroundColor,
+  layoutType,
+  className,
+  id,
+  children,
+}) => {
   const containerStyle = {
     backgroundColor: backgroundColor || '#ffffff',
     minHeight: '100vh',
@@ -11,10 +17,10 @@ const Screen = ({ backgroundColor, layoutType, className, id, children }) => {
     alignItems: layoutType === 'center' ? 'center' : 'flex-start',
   };
 
-  const screenClassName = `screen ${className}`;
+  const screenClassName = `Screen ${className}`;
 
   return (
-    <div className={screenClassName} id = {id} style={containerStyle}>
+    <div className={screenClassName} id={id} style={containerStyle}>
       {children}
     </div>
   );

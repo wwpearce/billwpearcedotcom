@@ -42,13 +42,12 @@ function Container() {
         <ScrollSpy
           offsetTop={50}
           useBoxMethod={false}
-          scrolledPastClassName={'scrolled'}
           onUpdateCallback={handleUpdateCallback}
         >
           <Screen
             backgroundColor="#fff"
             layoutType="center"
-            className="Screen white splash"
+            className="white Splash"
             id="zero"
           >
             <Hero className="hero-svg" />
@@ -56,7 +55,7 @@ function Container() {
           <Screen
             backgroundColor="#000"
             layoutType="center"
-            className="Screen black about"
+            className="black About"
             id="first"
           >
             <About />
@@ -64,7 +63,7 @@ function Container() {
           <Screen
             backgroundColor="#fff"
             layoutType="center"
-            className="Screen white services"
+            className="white Services"
             id="second"
           >
             <Services />
@@ -72,7 +71,7 @@ function Container() {
           <Screen
             backgroundColor="#000"
             layoutType="center"
-            className="Screen black portfolio"
+            className="black Portfolio"
             id="third"
           >
             <Portfolio />

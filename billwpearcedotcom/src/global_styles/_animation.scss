@@ -1,0 +1,23 @@
+.Screen {
+  .animate-svg {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    &.force {
+      animation: dash 1.25s linear forwards;
+    }
+  }
+  &.scrolled {
+    .animate-svg {
+      animation: dash 2.5s linear forwards;
+      &.fast {
+        animation-duration: 1.25s;
+      }
+    }
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

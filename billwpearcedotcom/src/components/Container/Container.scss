@@ -13,21 +13,21 @@
     height: 100%;
   }
 
-  .Screen.splash {
-      .hero-svg {
+  .Screen.Splash {
+    svg {
+      width: 550px;
+    }
+
+    @media (min-width: 600px) {
+      svg {
         width: 550px;
       }
+    }
 
-      @media (min-width: 600px) {
-        .hero-svg {
-          width: 550px;
-        }
-      }
-
-      @media (min-width: 1200px) {
-        .hero-svg {
-          width: 650px;
-        }
+    @media (min-width: 1200px) {
+      svg {
+        width: 650px;
       }
     }
+  }
 }

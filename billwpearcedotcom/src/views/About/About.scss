@@ -1,19 +1,29 @@
 @import '../../global_styles/_variables.scss';
 
 .About {
-    color: white;
-display: flex;
-flex-direction: column;
-justify-items: center;
-align-items: center;
-width: 100%;
-    svg {
-        width: 200px;
-    }
+  color: white;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  svg {
+    width: 150px;
+  }
+  li {
+    display: list-item;
+    list-style-type: '🤯';
+    padding-inline-start: 1ch;
+  }
+}
+
+.copy-wrapper,
+#hi {
+  margin: 2.5vh 0;
 }
 
 .copy-wrapper {
-    width: 66vw;
+  width: 100%;
 }
 
 @media (min-width: $mobile-width) {
@@ -23,5 +33,5 @@ width: 100%;
   }
   .copy-wrapper {
     width: 33vw;
-}
+  }
 }

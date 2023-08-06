@@ -18,7 +18,7 @@ const Navigation = ({ isScrolled }) => {
   const [isOpen, setOpen] = useState(false);
 
   const toggleOpen = (isOpen) => {
-    return !isOpen;
+    setOpen(isOpen);
   };
 
   useEffect(() => {
@@ -34,6 +34,9 @@ const Navigation = ({ isScrolled }) => {
     );
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
+      if (isMobile) {
+        target.classList.add('scrolled');
+      }
     }
   };
 
@@ -41,11 +44,7 @@ const Navigation = ({ isScrolled }) => {
     <>
       {isMobile && (
         <div className="hamburger-menu">
-          <nav
-            className={`mobile-sticky-nav ${
-              isNavVisible ? 'visible' : ''
-            }`}
-          >
+          <nav className={`mobile-sticky-nav ${'visible'}`}>
             <div className="nav-item mobile-hamburger">
               <Hamburger toggled={isOpen} toggle={setOpen} />
             </div>
@@ -103,7 +102,7 @@ const Navigation = ({ isScrolled }) => {
               </div>
             </a>
           </div>
-          <div className="nav-item portfolio">
+          <div className="nav-item contact">
             <a onClick={(e) => onPress(e)} href="www.google.com">
               <div>
                 <ContactSVG />

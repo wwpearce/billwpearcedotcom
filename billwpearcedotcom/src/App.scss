@@ -1,6 +1,9 @@
 @use 'global_styles/_reset.scss';
 @use 'global_styles/_grid.scss';
 @use 'global_styles/_typography.scss';
+@use 'global_styles/_animation.scss';
+@use 'global_styles/_scrollspy.scss';
+
 
 .App {
   position: absolute;

@@ -1,0 +1,11 @@
+@import './_variables.scss';
+
+html {
+  scroll-padding-top: 71px; /* height of your navbar */
+}
+
+@media (min-width: $mobile-width) {
+  html {
+    scroll-padding-top: 96px;
+  }
+}
