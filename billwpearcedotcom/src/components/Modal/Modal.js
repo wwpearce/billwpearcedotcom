@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Hamburger from 'hamburger-react';
+
 import './Modal.scss'; // Import your CSS styles for Modal component
 
 const Modal = ({ project, closeModal }) => {
@@ -19,6 +21,7 @@ const Modal = ({ project, closeModal }) => {
 
   const handleCloseModal = () => {
     setShouldAnimate(false);
+    console.log('sup');
   };
 
   const handleTransitionEnd = () => {
@@ -30,14 +33,23 @@ const Modal = ({ project, closeModal }) => {
 
   return (
     <div
-      className={`modal-overlay ${isOpen && shouldAnimate ? 'open' : ''}`}
+      className={`modal-overlay ${
+        isOpen && shouldAnimate ? 'open' : ''
+      }`}
       onTransitionEnd={handleTransitionEnd}
       onClick={handleCloseModal}
     >
-      <div className={`modal-content ${isOpen && shouldAnimate ? 'open' : ''}`} onClick={(e) => e.stopPropagation()}>
-        <button className="close-button" onClick={handleCloseModal}>
-          &times;
-        </button>
+      <div
+        className={`modal-content ${
+          isOpen && shouldAnimate ? 'open' : ''
+        }`}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <Hamburger
+          className="close-button"
+          toggled={true}
+          toggle={handleCloseModal}
+        />
         {project && (
           <>
             <h2>{project.title}</h2>

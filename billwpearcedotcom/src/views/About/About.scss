@@ -10,9 +10,14 @@
   svg {
     width: 150px;
   }
-  li {
+  li.icon-one {
     display: list-item;
-    list-style-type: '🤯';
+    list-style-type: '⌛️';
+    padding-inline-start: 1ch;
+  }
+  li.icon-two {
+    display: list-item;
+    list-style-type: '🚀';
     padding-inline-start: 1ch;
   }
 }
@@ -24,6 +29,9 @@
 
 .copy-wrapper {
   width: 100%;
+  h2, p {
+    text-align: center;
+  }
 }
 
 @media (min-width: $mobile-width) {
@@ -33,5 +41,16 @@
   }
   .copy-wrapper {
     width: 33vw;
+    h2, p {
+      text-align: left;
+    }
+  }
+}
+
+@media (min-width: $mobile-width) {
+  .About {
+    svg {
+      width: 250px;
+    }
   }
 }

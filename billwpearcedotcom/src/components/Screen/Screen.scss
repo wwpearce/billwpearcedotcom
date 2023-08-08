@@ -1,4 +1,44 @@
+@import '../../global_styles/_mixins.scss';
+
 .Screen {
-  background-color: white;
-  padding: 10vw 5vh;
+  background-color: $black;
+  padding: 30px 30px;
+  width: 100%;
+  position: relative;
+  height: 100%;
+  &:nth-of-type(odd) {
+    background-color: $white;
+  }
+  &.full-bleed {
+    width: 100vw;
+  }
+  @include devices(tablet) {
+    padding: 60px 65px;
+  }
+  @include devices(desktop) {
+    padding: 60px 90px;
+  }
+  @include devices(widescreen) {
+    padding: 60px 100px;
+  }
+  @include devices(fullhd) {
+    padding: 60px 160px;
+  }
+  &.Splash {
+    svg {
+      width: 350px;
+      @include devices(tablet) {
+        width: 400px;
+      }
+      @include devices(desktop) {
+        width: 450px;
+      }
+      @include devices(widescreen) {
+        width: 500px;
+      }
+      @include devices(fullhd) {
+        width: 600px;
+      }
+    }
+  }
 }

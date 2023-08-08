@@ -1,0 +1,51 @@
+@import './_variables.scss';
+
+@mixin animate-svg-delay(
+  $rate: 0.25s,
+  $duration: 2.5s,
+  $easing: linear
+) {
+  @each $selector in ('> path', 'g > path') {
+    @if (selector-nest('.animate-svg', $selector)) {
+      #{$selector} {
+        animation: dash $duration $easing forwards;
+        animation-delay: 0s;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        @for $i from 2 through 100 {
+          &:nth-child(#{$i}) {
+            animation-delay: ($i - 1) * $rate;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin devices($breakpoint) {
+  @if $breakpoint == mobile {
+    @media only screen and (min-width: $mobile-min-width) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media only screen and (min-width: $tablet-min-width) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: $desktop-min-width) {
+      @content;
+    }
+  }
+  @if $breakpoint == widescreen {
+    @media only screen and (min-width: $widescreen-min-width) {
+      @content;
+    }
+  }
+  @if $breakpoint == fullhd {
+    @media only screen and (min-width: $fullhd-min-width) {
+      @content;
+    }
+  }
+}

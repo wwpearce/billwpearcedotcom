@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './Portfolio.scss'; // Import your CSS styles for Portfolio component
 import Modal from '../../components/Modal/Modal';
 
+import { ReactComponent as WorkScripSVG } from '../../img/Work-02.svg';
+
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedTags, setSelectedTags] = useState(new Set());
@@ -14,10 +16,74 @@ const Portfolio = () => {
       description: 'Description for Project 1',
       imageUrl:
         'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
-      tags: ['Tag1', 'Tag2'],
+      tags: ['Design', 'Logos', 'Illustration', 'Web Design'],
     },
     {
       id: 2,
+      title: 'Project 2',
+      description: 'Description for Project 2',
+      imageUrl:
+        'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
+      tags: ['Web Design', 'Design', 'Front-end Development'],
+    },
+    {
+      id: 3,
+      title: 'Project 1',
+      description: 'Description for Project 1',
+      imageUrl:
+        'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
+      tags: ['Front-end Development', 'Shopify', 'Squarespace'],
+    },
+    {
+      id: 4,
+      title: 'Project 2',
+      description: 'Description for Project 2',
+      imageUrl:
+        'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
+      tags: ['Tag2', 'Tag3'],
+    },
+    {
+      id: 5,
+      title: 'Project 1',
+      description: 'Description for Project 1',
+      imageUrl:
+        'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
+      tags: ['Tag1', 'Tag2'],
+    },
+    {
+      id: 6,
+      title: 'Project 2',
+      description: 'Description for Project 2',
+      imageUrl:
+        'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
+      tags: ['Tag2', 'Tag3'],
+    },
+    {
+      id: 7,
+      title: 'Project 1',
+      description: 'Description for Project 1',
+      imageUrl:
+        'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
+      tags: ['Tag1', 'Tag2'],
+    },
+    {
+      id: 8,
+      title: 'Project 2',
+      description: 'Description for Project 2',
+      imageUrl:
+        'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
+      tags: ['Tag2', 'Tag3'],
+    },
+    {
+      id: 9,
+      title: 'Project 1',
+      description: 'Description for Project 1',
+      imageUrl:
+        'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
+      tags: ['Tag1', 'Tag2'],
+    },
+    {
+      id: 10,
       title: 'Project 2',
       description: 'Description for Project 2',
       imageUrl:
@@ -57,15 +123,29 @@ const Portfolio = () => {
     setSelectedTags(newSelectedTags);
   };
 
+  const handleSelectChange = (event) => {
+    const tag = event.target.value;
+    toggleTag(tag);
+  };
+
   return (
-    <div className="portfolio">
+    <div className="portfolio-inner-wrapper">
+      <WorkScripSVG className="animate-svg" />
       <div className="tag-container">
-        {Array.from(allTags).map((tag) => (
+        <select value="" onChange={handleSelectChange}>
+          <option value="" disabled>
+            Select a tag
+          </option>
+          {Array.from(allTags).map((tag) => (
+            <option key={tag} value={tag}>
+              {tag}
+            </option>
+          ))}
+        </select>
+        {Array.from(selectedTags).map((tag) => (
           <button
             key={tag}
-            className={`tag ${
-              selectedTags.has(tag) ? 'selected' : ''
-            }`}
+            className="tag selected"
             onClick={() => toggleTag(tag)}
           >
             {tag}

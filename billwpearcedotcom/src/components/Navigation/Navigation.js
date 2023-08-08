@@ -13,13 +13,8 @@ import { ReactComponent as ContactSVG } from '../../img/contact.svg';
 import { ReactComponent as PortfolioSVG } from '../../img/portfolio.svg';
 import { ReactComponent as ServicesSVG } from '../../img/services.svg';
 
-const Navigation = ({ isScrolled }) => {
+const Navigation = ({ isScrolled, isOpen, toggleOpen, setOpen }) => {
   const [isNavVisible, setIsNavVisible] = useState(false);
-  const [isOpen, setOpen] = useState(false);
-
-  const toggleOpen = (isOpen) => {
-    setOpen(isOpen);
-  };
 
   useEffect(() => {
     setIsNavVisible(isScrolled);
@@ -35,7 +30,7 @@ const Navigation = ({ isScrolled }) => {
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
       if (isMobile) {
-        target.classList.add('scrolled');
+        target.classList.remove('scrolled');
       }
     }
   };
@@ -44,7 +39,11 @@ const Navigation = ({ isScrolled }) => {
     <>
       {isMobile && (
         <div className="hamburger-menu">
-          <nav className={`mobile-sticky-nav ${'visible'}`}>
+          <nav
+            className={`mobile-sticky-nav ${
+              isNavVisible ? 'visible' : ''
+            }`}
+          >
             <div className="nav-item mobile-hamburger">
               <Hamburger toggled={isOpen} toggle={setOpen} />
             </div>

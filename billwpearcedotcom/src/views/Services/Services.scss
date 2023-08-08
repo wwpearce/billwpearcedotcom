@@ -12,7 +12,7 @@
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    position: absolute;
+    position: relative;
 
     .services-svg {
       width: 310px;
@@ -42,7 +42,7 @@
 
     .services-headings-svg {
       height: 5vh;
-      margin: 2.5vh 0 2vh 0;
+      margin: 3vh 0 2vh 0;
     }
   }
   .card {
@@ -55,6 +55,20 @@
       display: list-item;
       list-style-type: '🆒';
       padding-inline-start: 1ch;
+    }
+  }
+}
+
+@media screen and (min-width: $mobile-width) {
+  .Services {
+    .services-wrapper {
+      .services-svg {
+        margin-bottom: 8vh;
+      }
+      .services-headings-svg {
+        height: 8vh;
+        margin: 0vh 0 5vh 0;
+      }
     }
   }
 }

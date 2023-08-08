@@ -1,3 +1,5 @@
+@import './easings.scss';
+
 $nav-height: 4vh;
 
 $black: #000000;
@@ -7,5 +9,15 @@ $mobile-width: 600px;
 $tablet-width: 900px;
 $desktop-width: 1024px;
 
-$easeInCirc: cubic-bezier(0.55, 0, 1, 0.45);
-$easeOutCirc: cubic-bezier(0, 0.55, 0.45, 1);
+$easeIn: $easeInCirc;
+$easeOut: $easeOutSine;
+
+$mobile-min-width: 0px;
+$mobile-max-width: 768px;
+$tablet-min-width: $mobile-max-width + 1px;
+$tablet-max-width: 1024px;
+$desktop-min-width: $tablet-max-width + 1px;
+$desktop-max-width: 1215px;
+$widescreen-min-width: $desktop-max-width + 1px;
+$widescreen-max-width: 1407px;
+$fullhd-min-width: $widescreen-max-width + 1px;

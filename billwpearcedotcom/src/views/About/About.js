@@ -19,32 +19,30 @@ const TextDisplay = () => {
           I've done this for a <span>long time</span>
         </h3>
         <ul className="about-list">
-          <li>I remember when Notepad ++ came out</li>
-          <li>When I first used Photoshop it was on version 8</li>
-          <li>My first website was in Flash</li>
+          <li className="icon-one">
+            I remember when Notepad ++ came out
+          </li>
+          <li className="icon-one">
+            When I first used Photoshop it was on version 8
+          </li>
+          <li className="icon-one">My first website was in Flash</li>
         </ul>
         <h3>
           I've done this for some <span>big names</span>
         </h3>
         <ul className="about-list">
-          <li>
+          <li className="icon-two">
             I worked at Amazon and pushed code to the fourth most
             visited website on the internet
           </li>
-          <li>
+          <li className="icon-two">
             Other clients and employers include Publicis Group,
             Goldman Sachs, Code & Theory, DC Comics, WWE, etc.
           </li>
         </ul>
         <p></p>
-        <ul className="about-list">
-          <li>Tea Lady - Creative Director</li>
-          <li>
-            Secret Football Club - Contributing Designer (and striker)
-          </li>
-        </ul>
       </div>
-      <MeSVG className="animate-svg" />
+      <MeSVG className="animate-svg-no-children" />
     </div>
   );
 };

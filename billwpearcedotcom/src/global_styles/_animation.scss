@@ -1,18 +1,26 @@
+@import './_mixins.scss';
+@import './_variables.scss';
+
 .Screen {
   .animate-svg {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     &.force {
-      animation: dash 1.25s linear forwards;
+      @include animate-svg-delay(0.15s, 1.5s, $easeOut);
     }
   }
   &.scrolled {
     .animate-svg {
-      animation: dash 2.5s linear forwards;
-      &.fast {
-        animation-duration: 1.25s;
-      }
+      @include animate-svg-delay(0.5s, 2.5s, $easeOut);
     }
+    .animate-svg-no-children {
+      stroke-dashoffset: 1000;
+      animation: dash 2.5s linear forwards;
+    }
+  }
+  .animate-svg-no-children {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
   }
 }
 
