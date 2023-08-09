@@ -10,31 +10,31 @@ const Services = () => {
     <div className="services-wrapper">
       <ServicesScriptSVG className="services-svg animate-svg" />
       <p>Here's what's on the table:</p>
-      <div className="services-inner-wrapper services-row">
-        <div className="card">
+      <div className="services-inner-wrapper">
+        <div className="card card-one">
           <DesignAndIllustrationSVG className="services-headings-svg" />
           <ul>
             <li>Websites and webapps of all shapes and kinds!</li>
             <li>Logo and Identites</li>
             <li>Flyers</li>
             <li>Merch</li>
+            <li>Interaction Design</li>
           </ul>
         </div>
-        <div className="card">
+        <div className="card card-two">
           <WebDevelopmentSVG className="services-headings-svg" />
           <ul>
             <li>Websites and webapps of all shapes and kinds!</li>
             <li>Custom development for Shopify/Squarespace/etc.</li>
-            <li>Custom tooling (i.e. Figma Plugins)</li>
+            <li>Custom tools ( i.e. Figma Plugins )</li>
           </ul>
         </div>
-        <div className="card">
+        <div className="card card-three">
           <CreativeConsultingSVG className="services-headings-svg" />
           <ul>
             <li>Creative Direction</li>
             <li>Design systems</li>
             <li>Branding</li>
-            <li>Interaction Design</li>
             <li>Design and Development process optimization</li>
           </ul>
         </div>

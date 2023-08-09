@@ -11,15 +11,19 @@ const TextDisplay = () => {
         <h2>Hi! It's me, Bill!</h2>
         <p>
           I’ve been a creative professional for over twenty years,
-          wearing many different hats (not literally; I don’t like
-          hats) including{' '}
+          wearing many different hats ( not literally; I don’t like
+          hats ) including{' '}
           <em>
             designer, illustrator, art director, creative director,
             creative technologist, and front-end developer
           </em>
           .
-          <br />
-          <br />
+        </p>
+        <p>
+          I'm currently <code>available</code> for freelance and
+          contract work.
+        </p>
+        <p>
           Here’s some points about my professional life, in bullet
           form for your convenience.
         </p>

@@ -49,3 +49,24 @@
     }
   }
 }
+
+@mixin clock-list($start, $end, $startTime: 0) {
+  $clocks: ();
+  @for $i from $start through $end {
+    $clocks: append($clocks, unquote("'\\U0001F550' + #{($i - $startTime + 12) % 12}"), comma);
+  }
+  $clock-count: length($clocks);
+  li {
+    &::marker {
+      list-style-type: none;
+    }
+    $index: 0;
+    @for $i from $start through $end {
+      &:nth-child(#{$i}) &::marker {
+        content: nth($clocks, $index % $clock-count + 1);
+        list-style-type: none;
+      }
+      $index: $index + 1;
+    }
+  }
+}

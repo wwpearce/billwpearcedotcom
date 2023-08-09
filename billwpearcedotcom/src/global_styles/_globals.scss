@@ -1,9 +1,26 @@
-
-
 em {
   font-weight: 700;
 }
 
 ul {
-    margin-left: 20px;
+  margin-left: 20px;
+}
+
+option, select {
+  color: black;
+}
+
+select {
+  padding: 5px 10px;
+  border-radius: 6px;
+  text-align: center;
+  text-align-last: center;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &::-ms-expand {
+    display: none;
   }
+}

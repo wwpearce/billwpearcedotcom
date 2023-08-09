@@ -1,18 +1,45 @@
-li.icon-one {
-  display: list-item;
-  list-style-type: '⌛️';
-  padding-inline-start: 1ch;
+@import './_mixins.scss';
+li {
+  &::marker {
+    vertical-align: middle;
+  }
 }
-li.icon-two {
-  display: list-item;
-  list-style-type: '🚀';
-  padding-inline-start: 1ch;
+
+.About {
+  li.icon-one {
+    display: list-item;
+    list-style-type: '🕒';
+    padding-inline-start: 1.5ch;
+  }
+  li.icon-two {
+    display: list-item;
+    list-style-type: '🆒';
+    padding-inline-start: 1.5ch;
+  }
 }
-.card {
-  li {
-      width: 250px;
-      display: list-item;
-      list-style-type: '🆒';
-      padding-inline-start: 1ch;
+
+.Services {
+  .card {
+    &.card-one {
+       li {
+        list-style-type: '🖼️';
+      }
     }
+    &.card-two {
+      li {
+        // list-style-type: '🌐';
+        list-style-type: '🖥️';
+        list-style-type: '💾';
+      }
+    }
+    &.card-three {
+      li {
+        list-style-type: '💼';
+      }
+    }
+    li {
+      display: list-item;
+      padding-inline-start: 1.5ch;
+    }
+  }
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Portfolio.scss'; // Import your CSS styles for Portfolio component
 import Modal from '../../components/Modal/Modal';
+import Button from '../../components/Button/Button';
 
 import { ReactComponent as WorkScripSVG } from '../../img/Work-02.svg';
 
@@ -8,6 +9,8 @@ const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedTags, setSelectedTags] = useState(new Set());
 
+  const tagEmojis = '📎';
+  // #️⃣
   // Sample project data with tags
   const projects = [
     {
@@ -134,23 +137,25 @@ const Portfolio = () => {
       <div className="tag-container">
         <select value="" onChange={handleSelectChange}>
           <option value="" disabled>
-            Select a tag
+            Pick a tag 👇
           </option>
           {Array.from(allTags).map((tag) => (
             <option key={tag} value={tag}>
-              {tag}
+              {`${tagEmojis} ${tag}`}
             </option>
           ))}
         </select>
-        {Array.from(selectedTags).map((tag) => (
-          <button
-            key={tag}
-            className="tag selected"
-            onClick={() => toggleTag(tag)}
-          >
-            {tag}
-          </button>
-        ))}
+        <div className="selected-tags-container">
+          {Array.from(selectedTags).map((tag) => (
+            <Button
+              key={tag}
+              className="tag selected"
+              onClick={() => toggleTag(tag)}
+            >
+              {`${tagEmojis} ${tag}`}
+            </Button>
+          ))}
+        </div>
       </div>
       <div className="portfolio-grid">
         {filteredProjects.map((project) => (
@@ -158,8 +163,8 @@ const Portfolio = () => {
             key={project.id}
             className="project-card"
             onClick={() => handleProjectClick(project)}
+            style={{ backgroundImage: `url(${project.imageUrl})` }}
           >
-            <img src={project.imageUrl} alt={project.title} />
             <h3>{project.title}</h3>
           </div>
         ))}
