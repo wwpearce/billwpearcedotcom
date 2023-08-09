@@ -6,6 +6,9 @@
   width: 100%;
   position: relative;
   height: 100%;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
   &:nth-of-type(odd) {
     background-color: $white;
   }
@@ -13,7 +16,7 @@
     width: 100vw;
   }
   @include devices(tablet) {
-    padding: 60px 65px;
+    padding: 60px 35px;
   }
   @include devices(desktop) {
     padding: 60px 90px;
@@ -25,6 +28,8 @@
     padding: 60px 160px;
   }
   &.Splash {
+    justify-content: center;
+    align-items: center;
     svg {
       width: 350px;
       @include devices(tablet) {

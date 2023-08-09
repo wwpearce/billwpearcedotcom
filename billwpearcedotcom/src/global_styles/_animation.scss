@@ -11,7 +11,7 @@
   }
   &.scrolled {
     .animate-svg {
-      @include animate-svg-delay(0.5s, 2.5s, $easeOut);
+      @include animate-svg-delay(0.5s, 2.5s, linear);
     }
     .animate-svg-no-children {
       stroke-dashoffset: 1000;

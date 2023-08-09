@@ -1,56 +1,79 @@
 @import '../../global_styles/_variables.scss';
+@import '../../global_styles/_mixins.scss';
 
 .About {
-  color: white;
+  color: $white;
   display: flex;
   flex-direction: column-reverse;
-  justify-items: center;
-  align-items: center;
   width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-items: center;
   svg {
     width: 150px;
-  }
-  li.icon-one {
-    display: list-item;
-    list-style-type: '⌛️';
-    padding-inline-start: 1ch;
-  }
-  li.icon-two {
-    display: list-item;
-    list-style-type: '🚀';
-    padding-inline-start: 1ch;
-  }
-}
-
-.copy-wrapper,
-#hi {
-  margin: 2.5vh 0;
-}
-
-.copy-wrapper {
-  width: 100%;
-  h2, p {
-    text-align: center;
-  }
-}
-
-@media (min-width: $mobile-width) {
-  .About {
-    flex-direction: row;
-    justify-content: space-evenly;
+    height: auto;
   }
   .copy-wrapper {
-    width: 33vw;
-    h2, p {
-      text-align: left;
+    margin-top: 15px;
+    width: 100%;
+    h2,
+    h3,
+    p {
+      text-align: center;
+    }
+    > * {
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    span {
+      text-transform: uppercase;
     }
   }
-}
-
-@media (min-width: $mobile-width) {
-  .About {
+  ul {
+    margin-left: 20px;
+  }
+  @include devices(tablet) {
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    .copy-wrapper {
+      width: 400px;
+      margin-top: 0;
+      margin-right: 50px;
+      h2,
+      h3,
+      p {
+        text-align: left;
+      }
+    }
     svg {
-      width: 250px;
+      height: 400px;
+      width: auto;
+    }
+  }
+  @include devices(desktop) {
+    width: auto;
+    height: 450px;
+    .copy-wrapper {
+      width: 575px;
+    }
+    svg {
+      width: auto;
+      height: 450px;
+    }
+  }
+  @include devices(widescreen) {
+    height: 500px;
+    svg {
+      height: 500px;
+    }
+  }
+  @include devices(fullhd) {
+    height: 550px;
+    svg {
+      height: 550px;
     }
   }
 }

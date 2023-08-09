@@ -1,4 +1,5 @@
 @import '../../global_styles/_variables.scss';
+@import '../../global_styles/_mixins.scss';
 
 .Services {
   height: auto;
@@ -13,19 +14,17 @@
     justify-items: center;
     align-items: center;
     position: relative;
+    width: 100%;
 
     .services-svg {
       width: 310px;
-      margin-bottom: 2vh;
-      @media screen and (min-width: $mobile-width) {
-        width: 550px;
-      }
+      height: auto;
     }
 
     .services-row {
       display: flex;
       justify-content: space-between;
-      width: 66vw;
+      // width: 66vw;
     }
 
     .services-inner-wrapper {
@@ -33,11 +32,6 @@
       justify-content: center;
       flex-direction: column;
       align-items: center;
-      @media screen and (min-width: $mobile-width) {
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: flex-start;
-      }
     }
 
     .services-headings-svg {
@@ -50,24 +44,53 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    li {
-      width: 250px;
-      display: list-item;
-      list-style-type: '🆒';
-      padding-inline-start: 1ch;
-    }
   }
-}
-
-@media screen and (min-width: $mobile-width) {
-  .Services {
+  @include devices(tablet) {
     .services-wrapper {
       .services-svg {
-        margin-bottom: 8vh;
+        width: auto;
+        height: 100px;
       }
-      .services-headings-svg {
-        height: 8vh;
-        margin: 0vh 0 5vh 0;
+      .services-inner-wrapper {
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        > * {
+          margin-right: 60px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+  @include devices(desktop) {
+    .services-wrapper {
+      .services-svg {
+        width: auto;
+        height: 120px;
+      }
+      > * {
+        margin-right: 80px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  @include devices(widescreen) {
+    .services-wrapper {
+      .services-svg {
+        width: auto;
+        height: 140px;
+      }
+    }
+  }
+  @include devices(fullhd) {
+    .services-wrapper {
+      .services-svg {
+        width: auto;
+        height: 150px;
       }
     }
   }

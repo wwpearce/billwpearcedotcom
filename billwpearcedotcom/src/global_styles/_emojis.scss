@@ -1,0 +1,18 @@
+li.icon-one {
+  display: list-item;
+  list-style-type: '⌛️';
+  padding-inline-start: 1ch;
+}
+li.icon-two {
+  display: list-item;
+  list-style-type: '🚀';
+  padding-inline-start: 1ch;
+}
+.card {
+  li {
+      width: 250px;
+      display: list-item;
+      list-style-type: '🆒';
+      padding-inline-start: 1ch;
+    }
+}

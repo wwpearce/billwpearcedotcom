@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { isMobile } from 'react-device-detect';
+import { isMobile, isDesktop } from 'react-device-detect';
 import Hamburger from 'hamburger-react';
 
 import FullScreenMenu from '../FullScreenMenu/FullScreenMenu';
@@ -62,7 +62,7 @@ const Navigation = ({ isScrolled, isOpen, toggleOpen, setOpen }) => {
           />
         </div>
       )}
-      {!isMobile && (
+      {isDesktop && (
         <nav
           className={`desktop-sticky-nav ${
             isNavVisible ? 'visible' : ''

@@ -79,36 +79,16 @@ function Container() {
           useBoxMethod
           onUpdateCallback={handleUpdateCallback}
         >
-          <Screen
-            backgroundColor="#fff"
-            layoutType="center"
-            className="white Splash"
-            id="zero"
-          >
+          <Screen className="Splash" id="zero">
             <Hero className="hero-svg" />
           </Screen>
-          <Screen
-            backgroundColor="#000"
-            layoutType="center"
-            className="black About"
-            id="first"
-          >
+          <Screen className="About" id="first">
             <About />
           </Screen>
-          <Screen
-            backgroundColor="#fff"
-            layoutType="center"
-            className="white Services"
-            id="second"
-          >
+          <Screen className="Services" id="second">
             <Services />
           </Screen>
-          <Screen
-            backgroundColor="#000"
-            layoutType="center"
-            className="black Portfolio"
-            id="third"
-          >
+          <Screen className="Portfolio" id="third">
             <Portfolio />
           </Screen>
         </ScrollSpy>
