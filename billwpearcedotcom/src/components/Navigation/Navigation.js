@@ -101,9 +101,12 @@ const Navigation = ({ isScrolled, isOpen, toggleOpen, setOpen }) => {
               </div>
             </a>
           </div>
-          <div className="nav-item contact">
-            <a onClick={(e) => onPress(e)} href="www.google.com">
-              <div>
+          <div className="nav-item contact scroll_spy">
+            <a onClick={(e) => onPress(e)} href="#fourth">
+              <div
+                className="data-to-scrollspy"
+                data-to-scrollspy-id="fourth"
+              >
                 <ContactSVG />
               </div>
             </a>

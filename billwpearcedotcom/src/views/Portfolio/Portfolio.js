@@ -15,83 +15,107 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: 'Project 1',
+      title: 'Colwell Studios',
       description: 'Description for Project 1',
       imageUrl:
         'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
-      tags: ['Design', 'Logos', 'Illustration', 'Web Design'],
+      tags: ['Design', 'Identity', 'Logo Design', 'Typography'],
     },
     {
       id: 2,
-      title: 'Project 2',
+      title: 'Football Café',
       description: 'Description for Project 2',
       imageUrl:
         'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
-      tags: ['Web Design', 'Design', 'Front-end Development'],
+      tags: ['Development', 'Web Development', 'Shopify development'],
     },
     {
       id: 3,
-      title: 'Project 1',
+      title: 'noonehome',
       description: 'Description for Project 1',
       imageUrl:
         'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
-      tags: ['Front-end Development', 'Shopify', 'Squarespace'],
+      tags: [
+        'Development',
+        'Web Development',
+        'Squarespace Development',
+      ],
     },
     {
       id: 4,
-      title: 'Project 2',
+      title: 'WWE',
       description: 'Description for Project 2',
       imageUrl:
         'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
-      tags: ['Tag2', 'Tag3'],
+      tags: ['Development', 'Web Development'],
     },
     {
       id: 5,
-      title: 'Project 1',
+      title: 'Tea Lady',
       description: 'Description for Project 1',
       imageUrl:
         'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
-      tags: ['Tag1', 'Tag2'],
+      tags: [
+        'Design',
+        'Creative Direction',
+        'Development',
+        'Illustration',
+        'Typography',
+        'Web Design',
+        'Web Development',
+        'Shopify Development',
+        'Logo Design',
+        'Hand Lettering',
+        'Pattern Making',
+      ],
     },
     {
       id: 6,
-      title: 'Project 2',
+      title: 'Forrest and Groves',
       description: 'Description for Project 2',
       imageUrl:
         'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
-      tags: ['Tag2', 'Tag3'],
+      tags: ['Design', 'Identity', 'Logo Design', 'Typography'],
     },
     {
       id: 7,
-      title: 'Project 1',
+      title: 'Wickman House',
       description: 'Description for Project 1',
       imageUrl:
         'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
-      tags: ['Tag1', 'Tag2'],
+      tags: ['Design', 'Identity', 'Logo Design', 'Typography'],
     },
     {
       id: 8,
-      title: 'Project 2',
+      title: 'Secret Futébol Club',
       description: 'Description for Project 2',
       imageUrl:
         'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
-      tags: ['Tag2', 'Tag3'],
+      tags: [
+        'Design',
+        'Creative Direction',
+        'Identity',
+        'Illustration',
+        'Typography',
+        'Merch Design',
+        'Logo Design',
+        'Hand Lettering',
+        'Screen Printing',
+      ],
     },
     {
       id: 9,
-      title: 'Project 1',
-      description: 'Description for Project 1',
+      title: 'Diamondheart Muay Thai',
+      description: 'Diamondheart Muay Thai',
       imageUrl:
         'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
-      tags: ['Tag1', 'Tag2'],
-    },
-    {
-      id: 10,
-      title: 'Project 2',
-      description: 'Description for Project 2',
-      imageUrl:
-        'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
-      tags: ['Tag2', 'Tag3'],
+      tags: [
+        'Design',
+        'Illustration',
+        'Typography',
+        'Poster Design',
+        'Hand Lettering',
+      ],
     },
     // Add more projects with tags as needed
   ];

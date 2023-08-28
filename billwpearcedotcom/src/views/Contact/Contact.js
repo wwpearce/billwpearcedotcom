@@ -35,7 +35,11 @@ const ContactForm = () => {
 
         <Button type="submit">Send 📫</Button>
       </form>
-      <a href="https://www.instagram.com">
+      <a
+        href="https://www.instagram.com/inspiringsportsdocumentaries/"
+        target="_blank"
+        rel="noreferrer"
+      >
         or reach out on instagram
       </a>
     </div>
