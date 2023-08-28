@@ -1,0 +1,41 @@
+@import '../../global_styles/_mixins.scss';
+
+.Contact {
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include devices(tablet) {
+
+    }
+    @include devices(desktop) {
+
+    }
+    @include devices(widescreen) {
+
+    }
+    @include devices(fullhd) {
+
+    }
+  }
+  .form-header {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    @include devices(tablet) {
+      flex-direction: row;
+      justify-content: center;
+    }
+    @include devices(desktop) {
+
+    }
+    @include devices(widescreen) {
+
+    }
+    @include devices(fullhd) {
+
+    }
+  }
+}

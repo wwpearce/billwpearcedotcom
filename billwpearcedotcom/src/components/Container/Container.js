@@ -8,6 +8,7 @@ import Navigation from '../Navigation/Navigation';
 import Portfolio from '../../views/Portfolio/Portfolio';
 import About from '../../views/About/About';
 import Services from '../../views/Services/Services';
+import Contact from '../../views/Contact/Contact';
 import Button from '../Button/Button';
 
 import { ReactComponent as Hero } from '../../img/hero.svg';
@@ -99,6 +100,9 @@ function Container() {
           </Screen>
           <Screen className="Portfolio" id="third">
             <Portfolio />
+          </Screen>
+          <Screen className="Contact" id="fourth">
+            <Contact />
           </Screen>
         </ScrollSpy>
       </div>
