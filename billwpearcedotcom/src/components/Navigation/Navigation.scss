@@ -1,4 +1,5 @@
-@import "../../global_styles/variables";
+@import '../../global_styles/_variables.scss';
+@import '../../global_styles/_mixins.scss';
 
 .desktop-sticky-nav {
   position: fixed;
@@ -33,14 +34,28 @@
 
 .active-scroll-spy {
   transform: scale(1.1);
-  svg {
-    path {
-      // stroke: red;
-      stroke-width: 3px;
+  &::before {
+    content: '👉';
+    display: inline-block;
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99999;
+    @include devices(tablet) {
+      left: -30px;
     }
+    // @include devices(desktop) {
+    //   font-size: 18px;
+    // }
+    // @include devices(widescreen) {
+    //   font-size: 20px;
+    // }
+    // @include devices(fullhd) {
+    //   font-size: 24px;
+    // }
   }
 }
-
 .nav-item {
   display: flex;
   align-items: center;

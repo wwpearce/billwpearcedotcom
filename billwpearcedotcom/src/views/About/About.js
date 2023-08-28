@@ -20,8 +20,11 @@ const TextDisplay = () => {
           .
         </p>
         <p>
-          I'm currently <code>available</code> for freelance and
-          contract work.
+          I'm currently{' '}
+          <code>
+            <em>available</em>
+          </code>{' '}
+          for freelance and contract work.
         </p>
         <p>
           Here’s some points about my professional life, in bullet

@@ -8,6 +8,7 @@ import Navigation from '../Navigation/Navigation';
 import Portfolio from '../../views/Portfolio/Portfolio';
 import About from '../../views/About/About';
 import Services from '../../views/Services/Services';
+import Button from '../Button/Button';
 
 import { ReactComponent as Hero } from '../../img/hero.svg';
 
@@ -81,6 +82,14 @@ function Container() {
         >
           <Screen className="Splash" id="zero">
             <Hero className="hero-svg" />
+            <div
+              className="scroll-button"
+              data-to-scrollspy-id="first"
+            >
+              <Button>
+                <span>👇</span> Get to scrollin <span>👇</span>
+              </Button>
+            </div>
           </Screen>
           <Screen className="About" id="first">
             <About />

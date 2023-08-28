@@ -30,6 +30,20 @@
   &.Splash {
     justify-content: center;
     align-items: center;
+    .scroll-button {
+      position: absolute;
+      bottom: 15px;
+      @include devices(tablet) {
+        bottom: 30px;
+        .button {
+          &:hover {
+            span{
+              transform: translateX(10px);
+            }
+          }
+        }
+      }
+    }
     svg {
       width: 350px;
       @include devices(tablet) {
