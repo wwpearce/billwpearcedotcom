@@ -14,14 +14,14 @@ import Button from '../Button/Button';
 import { ReactComponent as Hero } from '../../img/hero.svg';
 
 function Container() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(true);
   const [isOpen, setOpen] = useState(false);
   const [timeoutId, setTimeoutId] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 0);
+      setIsScrolled(scrollPosition >= 0);
 
       // Clear the timeout if the user starts scrolling again
       clearTimeout(timeoutId);
@@ -76,7 +76,7 @@ function Container() {
         className={`inner-wrapper ${isScrolled ? 'scrolled' : ''}`}
       >
         <ScrollSpy
-          offsetBottom={100}
+          offsetBottom={0}
           scrollThrottle={80}
           useBoxMethod
           onUpdateCallback={handleUpdateCallback}

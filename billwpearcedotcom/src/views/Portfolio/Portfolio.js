@@ -17,8 +17,15 @@ const Portfolio = () => {
       id: 1,
       title: 'Colwell Studios',
       description: 'Description for Project 1',
-      imageUrl:
-        'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
+      linkUrl: 'https://www.colwellstudios.com/',
+      imageUrl: '/thumbs/thumbs--colwell_studios.jpg',
+      imageArray: [
+        '/img/portfolio/colwell-studios/img_1.jpg',
+        '/img/portfolio/colwell-studios/img_2.jpg',
+        '/img/portfolio/colwell-studios/img_3.jpg',
+        '/img/portfolio/colwell-studios/img_4.jpg',
+        '/img/portfolio/colwell-studios/img_5.jpg',
+      ],
       tags: ['Design', 'Identity', 'Logo Design', 'Typography'],
     },
     {
@@ -33,8 +40,18 @@ const Portfolio = () => {
       id: 3,
       title: 'noonehome',
       description: 'Description for Project 1',
-      imageUrl:
-        'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
+      linkUrl: 'https://www.noonehome.com',
+      imageUrl: '/thumbs/thumbs--noonehome.jpg',
+      imageArray: [
+        '/img/portfolio/noonehome/mobile-1.jpg',
+        '/img/portfolio/noonehome/mobile-2.jpg',
+        '/img/portfolio/noonehome/mobile-3.jpg',
+        '/img/portfolio/noonehome/mobile-4.jpg',
+        '/img/portfolio/noonehome/img-1.jpg',
+        '/img/portfolio/noonehome/img-2.jpg',
+        '/img/portfolio/noonehome/img-3.jpg',
+        '/img/portfolio/noonehome/img-4.jpg',
+      ],
       tags: [
         'Development',
         'Web Development',
@@ -45,8 +62,8 @@ const Portfolio = () => {
       id: 4,
       title: 'WWE',
       description: 'Description for Project 2',
-      imageUrl:
-        'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
+      imageUrl: '/thumbs/thumbs--wwe.jpg',
+      imageArray: ['/img/portfolio/wwe/wwe-01.jpg'],
       tags: ['Development', 'Web Development'],
     },
     {
