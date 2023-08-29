@@ -6,7 +6,7 @@ import { ReactComponent as AboutSVG } from '../../img/about.svg';
 import { ReactComponent as ContactSVG } from '../../img/contact.svg';
 import { ReactComponent as PortfolioSVG } from '../../img/portfolio.svg';
 import { ReactComponent as ServicesSVG } from '../../img/services.svg';
-import Services from '../../views/Services/Services';
+// import Services from '../../views/Services/Services';
 
 const FullScreenMenu = ({ isOpen, onPress, toggleOpen }) => {
   const [isMounted, setIsMounted] = useState(false);
@@ -58,8 +58,11 @@ const FullScreenMenu = ({ isOpen, onPress, toggleOpen }) => {
           </a>
         </li>
         <li>
-          <a onClick={(e) => onPress(e)} href="www.google.com">
-            <div>
+          <a onClick={handleItemTap} href="#fourth">
+            <div
+              className="data-to-scrollspy"
+              data-to-scrollspy-id="fourth"
+            >
               <ContactSVG />
             </div>
           </a>

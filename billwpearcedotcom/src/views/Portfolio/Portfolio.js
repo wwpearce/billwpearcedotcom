@@ -198,6 +198,7 @@ const Portfolio = () => {
           project={selectedProject}
           closeModal={closeModal}
           isOpen={!!selectedProject}
+          tags={selectedProject.tags}
         />
       )}
     </div>

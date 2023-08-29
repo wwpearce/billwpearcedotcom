@@ -85,7 +85,7 @@ function Container() {
             <Hero className="hero-svg" />
             <div
               className="scroll-button"
-              data-to-scrollspy-id="first"
+              // data-to-scrollspy-id="first"
             >
               <Button>
                 <span>👇</span> Get to scrollin <span>👇</span>
