@@ -1,3 +1,5 @@
+@import '../../global_styles/_variables.scss';
+
 .Button {
   background-color: white;
   color: black;
@@ -5,4 +7,11 @@
   border: 2px solid black;
   border-radius: 6px;
   width: fit-content;
+  cursor: pointer;
+  transition: all 0.2s $easeOut;
+  &:hover, &:active {
+    background-color: black;
+    color: white;
+    border-color: white;
+  }
 }

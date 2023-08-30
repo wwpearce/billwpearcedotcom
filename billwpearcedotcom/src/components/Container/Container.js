@@ -76,7 +76,7 @@ function Container() {
         className={`inner-wrapper ${isScrolled ? 'scrolled' : ''}`}
       >
         <ScrollSpy
-          offsetBottom={0}
+          offsetBottom={80}
           scrollThrottle={80}
           useBoxMethod
           onUpdateCallback={handleUpdateCallback}

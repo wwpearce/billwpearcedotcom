@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Hamburger from 'hamburger-react';
 import Button from '../Button/Button';
 
 import './Modal.scss'; // Import your CSS styles for Modal component
@@ -8,7 +7,7 @@ const Modal = ({ project, closeModal }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [shouldAnimate, setShouldAnimate] = useState(false);
   const [touchStartX, setTouchStartX] = useState(null); // Track the starting X position of the touch event
-  const tagEmojis = '📎';
+  const tagEmojis = '🎟️';
 
   useEffect(() => {
     if (project && !isOpen) {

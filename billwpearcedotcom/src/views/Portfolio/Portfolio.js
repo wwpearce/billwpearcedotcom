@@ -9,7 +9,7 @@ const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedTags, setSelectedTags] = useState(new Set());
 
-  const tagEmojis = '📎';
+  const tagEmojis = '🎟️';
   // #️⃣
   // Sample project data with tags
   const projects = [
@@ -62,6 +62,7 @@ const Portfolio = () => {
       id: 4,
       title: 'WWE',
       description: 'Description for Project 2',
+      linkUrl: 'https://www.wwe.com/',
       imageUrl: '/thumbs/thumbs--wwe.jpg',
       imageArray: ['/img/portfolio/wwe/wwe-01.jpg'],
       tags: ['Development', 'Web Development'],
@@ -70,8 +71,18 @@ const Portfolio = () => {
       id: 5,
       title: 'Tea Lady',
       description: 'Description for Project 1',
-      imageUrl:
-        'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
+      imageUrl: '/thumbs/thumbs--tealady.png',
+      linkUrl: 'https://www.tealadybk.com/',
+      imageArray: [
+        '/img/portfolio/noonehome/mobile-1.jpg',
+        '/img/portfolio/noonehome/mobile-2.jpg',
+        '/img/portfolio/noonehome/mobile-3.jpg',
+        '/img/portfolio/noonehome/mobile-4.jpg',
+        '/img/portfolio/noonehome/img-1.jpg',
+        '/img/portfolio/noonehome/img-2.jpg',
+        '/img/portfolio/noonehome/img-3.jpg',
+        '/img/portfolio/noonehome/img-4.jpg',
+      ],
       tags: [
         'Design',
         'Creative Direction',
@@ -88,26 +99,56 @@ const Portfolio = () => {
     },
     {
       id: 6,
-      title: 'Forrest and Groves',
+      title: 'Forrest & Groves',
       description: 'Description for Project 2',
-      imageUrl:
-        'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
+      imageUrl: '/thumbs/thumbs--forrest_and_groves.jpg',
+      linkUrl: 'https://www.instagram.com/forrestandgroves',
+      imageArray: [
+        '/img/portfolio/noonehome/mobile-1.jpg',
+        '/img/portfolio/noonehome/mobile-2.jpg',
+        '/img/portfolio/noonehome/mobile-3.jpg',
+        '/img/portfolio/noonehome/mobile-4.jpg',
+        '/img/portfolio/noonehome/img-1.jpg',
+        '/img/portfolio/noonehome/img-2.jpg',
+        '/img/portfolio/noonehome/img-3.jpg',
+        '/img/portfolio/noonehome/img-4.jpg',
+      ],
       tags: ['Design', 'Identity', 'Logo Design', 'Typography'],
     },
     {
       id: 7,
       title: 'Wickman House',
       description: 'Description for Project 1',
-      imageUrl:
-        'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
+      imageUrl: '/thumbs/thumbs--wickman_house.jpg',
+      linkUrl: 'https://www.wickmanhouse.com/',
+      imageArray: [
+        '/img/portfolio/noonehome/mobile-1.jpg',
+        '/img/portfolio/noonehome/mobile-2.jpg',
+        '/img/portfolio/noonehome/mobile-3.jpg',
+        '/img/portfolio/noonehome/mobile-4.jpg',
+        '/img/portfolio/noonehome/img-1.jpg',
+        '/img/portfolio/noonehome/img-2.jpg',
+        '/img/portfolio/noonehome/img-3.jpg',
+        '/img/portfolio/noonehome/img-4.jpg',
+      ],
       tags: ['Design', 'Identity', 'Logo Design', 'Typography'],
     },
     {
       id: 8,
       title: 'Secret Futébol Club',
       description: 'Description for Project 2',
-      imageUrl:
-        'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
+      linkUrl: 'https://www.instagram.com/secretfutbolclub/',
+      imageUrl: '/thumbs/thumbs--sfc.jpg',
+      imageArray: [
+        '/img/portfolio/noonehome/mobile-1.jpg',
+        '/img/portfolio/noonehome/mobile-2.jpg',
+        '/img/portfolio/noonehome/mobile-3.jpg',
+        '/img/portfolio/noonehome/mobile-4.jpg',
+        '/img/portfolio/noonehome/img-1.jpg',
+        '/img/portfolio/noonehome/img-2.jpg',
+        '/img/portfolio/noonehome/img-3.jpg',
+        '/img/portfolio/noonehome/img-4.jpg',
+      ],
       tags: [
         'Design',
         'Creative Direction',
@@ -124,8 +165,18 @@ const Portfolio = () => {
       id: 9,
       title: 'Diamondheart Muay Thai',
       description: 'Diamondheart Muay Thai',
-      imageUrl:
-        'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
+      linkeUrl: 'https://physicalculturecollective.com/',
+      imageUrl: '/thumbs/thumbs--diamond_heart.jpg',
+      imageArray: [
+        '/img/portfolio/noonehome/mobile-1.jpg',
+        '/img/portfolio/noonehome/mobile-2.jpg',
+        '/img/portfolio/noonehome/mobile-3.jpg',
+        '/img/portfolio/noonehome/mobile-4.jpg',
+        '/img/portfolio/noonehome/img-1.jpg',
+        '/img/portfolio/noonehome/img-2.jpg',
+        '/img/portfolio/noonehome/img-3.jpg',
+        '/img/portfolio/noonehome/img-4.jpg',
+      ],
       tags: [
         'Design',
         'Illustration',
@@ -174,7 +225,7 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio-inner-wrapper">
-      <WorkScripSVG className="animate-svg" />
+      <WorkScripSVG className="animate-svg script-svg" />
       <div className="tag-container">
         <select value="" onChange={handleSelectChange}>
           <option value="" disabled>

@@ -20,11 +20,11 @@
       margin-top: 15px;
     }
 
-    .services-svg {
-      width: 310px;
-      height: auto;
-      min-height: 10vh;
-    }
+    // .services-svg {
+    //   width: 310px;
+    //   height: auto;
+    //   min-height: 10vh;
+    // }
 
     .services-inner-wrapper {
       display: flex;
@@ -41,8 +41,9 @@
     }
 
     .services-headings-svg {
-      height: 48px;
+      height: 80px;
       margin: 3vh 0 2vh 0;
+      stroke: black;
     }
   }
   .card {
@@ -50,21 +51,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    ul {
+      width: 250px;
+    }
   }
   @include devices(tablet) {
+    padding: 60px;
     .services-wrapper {
       > * {
         margin-right: 0;
-        content: 'sup bro';
       }
-      .services-svg {
-        width: auto;
-        height: 100px;
-      }
+      // .services-svg {
+      //   width: auto;
+      //   height: 100px;
+      // }
       .services-inner-wrapper {
         flex-direction: row;
         justify-content: space-evenly;
         align-items: flex-start;
+        width: 100%;
         > * {
           margin-top: 0;
           margin-right: 60px;
@@ -73,14 +78,21 @@
           }
         }
       }
+      .card {
+        max-width: 400px;
+        margin-right: 0;
+        ul {
+          width: 200px;
+        }
+      }
     }
   }
   @include devices(desktop) {
     .services-wrapper {
-      .services-svg {
-        width: auto;
-        height: 120px;
-      }
+      // .services-svg {
+      //   width: auto;
+      //   height: 120px;
+      // }
       // > * {
       //   margin-right: 80px;
       //   &:last-child {
@@ -91,18 +103,18 @@
   }
   @include devices(widescreen) {
     .services-wrapper {
-      .services-svg {
-        width: auto;
-        height: 140px;
-      }
+      // .services-svg {
+      //   width: auto;
+      //   height: 140px;
+      // }
     }
   }
   @include devices(fullhd) {
     .services-wrapper {
-      .services-svg {
-        width: auto;
-        height: 150px;
-      }
+      // .services-svg {
+      //   width: auto;
+      //   height: 150px;
+      // }
     }
   }
 }

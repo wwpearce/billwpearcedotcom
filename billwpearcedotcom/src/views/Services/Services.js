@@ -1,32 +1,36 @@
 import './Services.scss';
 
 import { ReactComponent as ServicesScriptSVG } from '../../img/SVG_services-offered.svg';
-import { ReactComponent as DesignAndIllustrationSVG } from '../../img/SVG_design-and-illustration.svg';
-import { ReactComponent as WebDevelopmentSVG } from '../../img/SVG_web-development.svg';
-import { ReactComponent as CreativeConsultingSVG } from '../../img/SVG_creative-consulting.svg';
+import { ReactComponent as DesignAndIllustrationSVG } from '../../img/design-and-illustration-v2.svg';
+import { ReactComponent as WebDevelopmentSVG } from '../../img/web-development-v2.svg';
+import { ReactComponent as CreativeConsultingSVG } from '../../img/creative-consulting-v2.svg';
 
 const Services = () => {
   return (
     <div className="services-wrapper">
-      <ServicesScriptSVG className="services-svg animate-svg" />
+      <ServicesScriptSVG className="services-svg animate-svg script-svg" />
       <p>Here's what's on the table:</p>
       <div className="services-inner-wrapper">
         <div className="card card-one">
           <DesignAndIllustrationSVG className="services-headings-svg" />
           <ul>
-            <li>Websites and webapps of all shapes and kinds!</li>
-            <li>Logo and Identites</li>
+            <li>Websites</li>
+            <li>Logos</li>
+            <li>Identities</li>
             <li>Flyers</li>
             <li>Merch</li>
             <li>Interaction Design</li>
+            <li>Screen Printing</li>
           </ul>
         </div>
         <div className="card card-two">
           <WebDevelopmentSVG className="services-headings-svg" />
           <ul>
-            <li>Websites and webapps of all shapes and kinds!</li>
-            <li>Custom development for Shopify/Squarespace/etc.</li>
-            <li>Custom tools ( i.e. Figma Plugins )</li>
+            <li>Websites</li>
+            <li>Web Apps</li>
+            <li>Shopify</li>
+            <li>Squarespace</li>
+            <li>Figma Plugins</li>
           </ul>
         </div>
         <div className="card card-three">
@@ -35,7 +39,8 @@ const Services = () => {
             <li>Creative Direction</li>
             <li>Design systems</li>
             <li>Branding</li>
-            <li>Design and Development process optimization</li>
+            <li>Ecommerce</li>
+            <li>Creative Process Optimization</li>
           </ul>
         </div>
       </div>

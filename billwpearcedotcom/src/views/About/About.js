@@ -20,7 +20,7 @@ const TextDisplay = () => {
           .
         </p>
         <p>
-          I'm currently{' '}
+          I am{' '}
           <code>
             <em>available</em>
           </code>{' '}

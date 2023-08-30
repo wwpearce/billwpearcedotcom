@@ -5,15 +5,22 @@ li {
   }
 }
 
+
+li {
+  display: list-item;
+  padding-inline-start: 1.5ch;
+  list-style-type: '🌹';
+}
+
 .About {
   li.icon-one {
     display: list-item;
-    list-style-type: '🕒';
+    // list-style-type: '🕒';
     padding-inline-start: 1.5ch;
   }
   li.icon-two {
     display: list-item;
-    list-style-type: '🆒';
+    // list-style-type: '🆒';
     padding-inline-start: 1.5ch;
   }
 }
@@ -22,19 +29,19 @@ li {
   .card {
     &.card-one {
        li {
-        list-style-type: '🖼️';
+        // list-style-type: '🖼️';
       }
     }
     &.card-two {
       li {
         // list-style-type: '🌐';
-        list-style-type: '🖥️';
-        list-style-type: '💾';
+        // list-style-type: '🖥️';
+        // list-style-type: '💾';
       }
     }
     &.card-three {
       li {
-        list-style-type: '💼';
+        // list-style-type: '💼';
       }
     }
     li {

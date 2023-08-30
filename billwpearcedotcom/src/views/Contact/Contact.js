@@ -1,11 +1,14 @@
 import React from 'react';
 import './Contact.scss';
 
+import { ReactComponent as ContactScriptSVG } from '../../img/Contact-script.svg';
+
 import Button from '../../components/Button/Button';
 
 const ContactForm = () => {
   return (
     <div className="contact-wrapper">
+      <ContactScriptSVG className="script-svg animate-svg" />
       <p>shoot me an email</p>
       <form action="https://submit-form.com/ZFn1NLL2">
         <div className="form-header">
