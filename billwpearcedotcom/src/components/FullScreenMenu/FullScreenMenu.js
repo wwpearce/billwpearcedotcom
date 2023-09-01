@@ -4,7 +4,7 @@ import './FullScreenMenu.scss';
 
 import { ReactComponent as AboutSVG } from '../../img/about.svg';
 import { ReactComponent as ContactSVG } from '../../img/contact.svg';
-import { ReactComponent as PortfolioSVG } from '../../img/portfolio.svg';
+import { ReactComponent as PortfolioSVG } from '../../img/work.svg';
 import { ReactComponent as ServicesSVG } from '../../img/services.svg';
 // import Services from '../../views/Services/Services';
 

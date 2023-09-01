@@ -20,6 +20,8 @@ const Services = () => {
             <li>Flyers</li>
             <li>Merch</li>
             <li>Interaction Design</li>
+            <li>Pattern Making</li>
+            <li>Hand Lettering</li>
             <li>Screen Printing</li>
           </ul>
         </div>

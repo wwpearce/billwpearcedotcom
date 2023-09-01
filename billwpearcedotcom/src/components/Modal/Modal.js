@@ -77,6 +77,7 @@ const Modal = ({ project, closeModal }) => {
                 {project.title}
               </a>
             </h2>
+            <p>{project.description}</p>
             <div className="modal-tag-container">
               {Array.from(project.tags).map((tag) => (
                 <Button
@@ -99,8 +100,6 @@ const Modal = ({ project, closeModal }) => {
                 </a>
               ))}
             </div>
-            {/* <p>{project.description}</p> */}
-            {/* Add more project details here */}
           </div>
         )}
       </div>
