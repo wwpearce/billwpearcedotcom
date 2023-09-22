@@ -38,13 +38,28 @@ const ContactForm = () => {
 
         <Button type="submit">Send 📫</Button>
       </form>
-      <a
-        href="https://www.instagram.com/inspiringsportsdocumentaries/"
-        target="_blank"
-        rel="noreferrer"
-      >
-        or reach out on instagram
-      </a>
+      <div className="contact-sublinks">
+        <div>
+          reach out on
+          <a
+            href="https://www.instagram.com/inspiringsportsdocumentaries/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            instagram
+          </a>
+        </div>
+        <div>
+          or
+          <a
+            href="https://www.linkedin.com/in/billwpearce/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            linkedin
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

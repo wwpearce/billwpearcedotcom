@@ -68,7 +68,7 @@ const Modal = ({ project, closeModal }) => {
         </div>
         {project && (
           <div className="project-content_wrapper">
-            <h2>
+            <h1>
               <a
                 href={project.linkUrl}
                 target="_blank"
@@ -76,7 +76,7 @@ const Modal = ({ project, closeModal }) => {
               >
                 {project.title}
               </a>
-            </h2>
+            </h1>
             <p>{project.description}</p>
             <div className="modal-tag-container">
               {Array.from(project.tags).map((tag) => (
