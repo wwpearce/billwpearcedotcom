@@ -66,8 +66,8 @@
   }
 }
 
-// @media screen and (min-width: $tablet-min-width) and (max-height: 850px) {
-//   .Screen {
-//     height: 850px;
-//   }
-// }
+.mobile-safari {
+  .Screen.Splash .scroll-button {
+    bottom: 110px;
+  }
+}

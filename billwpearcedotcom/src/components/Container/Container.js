@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ScrollSpy from 'react-ui-scrollspy';
+import { isMobileSafari } from 'react-device-detect';
 
 import './Container.scss';
 
@@ -19,6 +20,9 @@ function Container() {
   const [timeoutId, setTimeoutId] = useState(null);
 
   useEffect(() => {
+    if (isMobileSafari) {
+      document.body.classList.add('mobile-safari');
+    }
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       setIsScrolled(scrollPosition >= 0);
