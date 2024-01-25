@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ScrollSpy from 'react-ui-scrollspy';
-import { isMobileSafari } from 'react-device-detect';
+import { isMobile, isIOS, isDesktop } from 'react-device-detect';
 
 import './Container.scss';
 
@@ -20,7 +20,7 @@ function Container() {
   const [timeoutId, setTimeoutId] = useState(null);
 
   useEffect(() => {
-    if (isMobileSafari) {
+    if (isIOS) {
       document.body.classList.add('mobile-safari');
     }
     const handleScroll = () => {
@@ -58,6 +58,21 @@ function Container() {
     }
   }, [isOpen, timeoutId, isScrolled]);
 
+  const onPress = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
+    e.preventDefault();
+    const target = window.document.getElementById(
+      e.currentTarget.href.split('#')[1]
+    );
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+      if (isMobile) {
+        target.classList.remove('scrolled');
+      }
+    }
+  };
+
   const toggleOpen = () => {
     setOpen(!isOpen);
   };
@@ -75,6 +90,9 @@ function Container() {
         isOpen={isOpen}
         toggleOpen={toggleOpen}
         setOpen={setOpen}
+        onPress={onPress}
+        isMobile={isMobile}
+        isDesktop={isDesktop}
       />
       <div
         className={`inner-wrapper ${isScrolled ? 'scrolled' : ''}`}
@@ -87,12 +105,16 @@ function Container() {
         >
           <Screen className="Splash" id="zero">
             <Hero className="hero-svg" />
-            <div
-              className="scroll-button"
-              // data-to-scrollspy-id="first"
-            >
+            <div className="scroll-button">
               <Button>
-                <span>👇</span> Get to scrollin <span>👇</span>
+                <a onClick={(e) => onPress(e)} href="#first">
+                  <div
+                    className="data-to-scrollspy"
+                    data-to-scrollspy-id="first"
+                  >
+                    <span>👇</span> Get to scrollin <span>👇</span>
+                  </div>
+                </a>
               </Button>
             </div>
           </Screen>

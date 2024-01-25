@@ -15,16 +15,12 @@ const TextDisplay = () => {
           hats ) including{' '}
           <em>
             designer, illustrator, art director, creative director,
-            creative technologist, and front-end developer
-          </em>
-          .
+            creative technologist,
+          </em>{' '}
+          and <em> front-end developer</em>.
         </p>
         <p>
-          I am{' '}
-          <code>
-            <em>available</em>
-          </code>{' '}
-          for freelance and contract work.
+          I'm <em>available</em> for freelance and contract work.
         </p>
         <p>
           Here’s some points about my professional life, in bullet

@@ -71,3 +71,19 @@
     bottom: 110px;
   }
 }
+
+@media only screen and (min-width: $mobile-min-width) and (max-width: $tablet-max-width) and (orientation: landscape) {
+  /* Your styles here */
+  .Screen {
+    &.Splash {
+      padding: 0;
+      svg {
+        height: 280px;
+        width: auto;
+      }
+      .scroll-button {
+        bottom: 5px;
+      }
+    }
+  }
+}

@@ -15,6 +15,28 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
+      title: 'Football Café',
+      description:
+        'Web development (in React) and custom code for Shopify.',
+      linkUrl: 'https://www.footballcafe.com',
+      imageUrl: '/thumbs/thumbs--football_cafe.jpg',
+      imageArray: [
+        '/img/portfolio/football-cafe/img-1.png',
+        '/img/portfolio/football-cafe/img-2.png',
+        '/img/portfolio/football-cafe/img-3.png',
+        '/img/portfolio/football-cafe/img-4.png',
+        '/img/portfolio/football-cafe/img-5.png',
+        '/img/portfolio/football-cafe/img-6.png',
+        '/img/portfolio/football-cafe/img-7.jpg',
+        '/img/portfolio/football-cafe/img-8.jpg',
+        '/img/portfolio/football-cafe/img-9.jpg',
+        '/img/portfolio/football-cafe/img-10.jpg',
+        '/img/portfolio/football-cafe/img-11.jpg',
+      ],
+      tags: ['Development', 'Web Development', 'Shopify Development'],
+    },
+    {
+      id: 2,
       title: 'Colwell Studios',
       description: '',
       linkUrl: 'https://www.colwellstudios.com/',
@@ -28,14 +50,6 @@ const Portfolio = () => {
       ],
       tags: ['Design', 'Identity', 'Logo Design', 'Typography'],
     },
-    // {
-    //   id: 2,
-    //   title: 'Football Café',
-    //   description: 'Description for Project 2',
-    //   imageUrl:
-    //     'http://billwpearce.com/assets/media/work/thumbnails/twentyfour.png',
-    //   tags: ['Development', 'Web Development', 'Shopify development'],
-    // },
     {
       id: 3,
       title: 'noonehome',

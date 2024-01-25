@@ -40,17 +40,7 @@ const ContactForm = () => {
       </form>
       <div className="contact-sublinks">
         <div>
-          reach out on
-          <a
-            href="https://www.instagram.com/inspiringsportsdocumentaries/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            instagram
-          </a>
-        </div>
-        <div>
-          or
+          or, reach out on
           <a
             href="https://www.linkedin.com/in/billwpearce/"
             target="_blank"

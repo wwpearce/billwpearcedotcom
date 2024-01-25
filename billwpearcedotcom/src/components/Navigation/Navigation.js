@@ -13,27 +13,18 @@ import { ReactComponent as ContactSVG } from '../../img/contact.svg';
 import { ReactComponent as PortfolioSVG } from '../../img/work.svg';
 import { ReactComponent as ServicesSVG } from '../../img/services.svg';
 
-const Navigation = ({ isScrolled, isOpen, toggleOpen, setOpen }) => {
+const Navigation = ({
+  isScrolled,
+  isOpen,
+  toggleOpen,
+  setOpen,
+  onPress,
+}) => {
   const [isNavVisible, setIsNavVisible] = useState(false);
 
   useEffect(() => {
     setIsNavVisible(isScrolled);
   }, [isScrolled]);
-
-  const onPress = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-  ) => {
-    e.preventDefault();
-    const target = window.document.getElementById(
-      e.currentTarget.href.split('#')[1]
-    );
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-      if (isMobile) {
-        target.classList.remove('scrolled');
-      }
-    }
-  };
 
   return (
     <>
@@ -89,7 +80,14 @@ const Navigation = ({ isScrolled, isOpen, toggleOpen, setOpen }) => {
             </a>
           </div>
           <div className="nav-item logo">
-            <Logo />
+            <a onClick={(e) => onPress(e)} href="#zero">
+              <div
+                className="data-to-scrollspy"
+                data-to-scrollspy-id="zero"
+              >
+                <Logo />
+              </div>
+            </a>
           </div>
           <div className="nav-item portfolio scroll_spy">
             <a onClick={(e) => onPress(e)} href="#third">

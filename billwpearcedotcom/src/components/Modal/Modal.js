@@ -4,10 +4,31 @@ import Button from '../Button/Button';
 import './Modal.scss'; // Import your CSS styles for Modal component
 
 const Modal = ({ project, closeModal }) => {
+  const [loaded, setLoaded] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [shouldAnimate, setShouldAnimate] = useState(false);
+  const [expanded, setExpanded] = useState(false);
   const [touchStartX, setTouchStartX] = useState(null); // Track the starting X position of the touch event
   const tagEmojis = '🎟️';
+
+  useEffect(() => {
+    const images = project.imageArray.map((imagePath) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = imagePath;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    });
+
+    Promise.all(images)
+      .then(() => {
+        setLoaded(true);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, [project]);
 
   useEffect(() => {
     if (project && !isOpen) {
@@ -24,6 +45,12 @@ const Modal = ({ project, closeModal }) => {
   const handleCloseModal = () => {
     setShouldAnimate(false);
     console.log('sup');
+  };
+
+  const toggleAccordion = () => {
+    if (project.tags.length > 5) {
+      setExpanded(!expanded);
+    }
   };
 
   const handleTransitionEnd = () => {
@@ -64,7 +91,7 @@ const Modal = ({ project, closeModal }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="close-wrapper">
-          <div class="close" onClick={handleCloseModal} />
+          <div className="close" onClick={handleCloseModal} />
         </div>
         {project && (
           <div className="project-content_wrapper">
@@ -78,20 +105,33 @@ const Modal = ({ project, closeModal }) => {
               </a>
             </h1>
             <p>{project.description}</p>
-            <div className="modal-tag-container">
+            <div
+              className={`modal-tag-container${
+                project.tags.length > 5
+                  ? ` ${expanded ? 'expanded' : ''}`
+                  : ' short'
+              }`}
+              onClick={toggleAccordion}
+            >
               {Array.from(project.tags).map((tag) => (
-                <Button
-                  key={tag}
-                  className="tag selected"
-                  // onClick={() => toggleTag(tag)}
-                >
+                <Button key={tag} className="tag selected">
                   {`${tagEmojis} ${tag}`}
                 </Button>
               ))}
             </div>
-            <div className="image-container">
+            <div className={`loader${loaded ? ' loaded' : ''}`}>
+              loading images...
+            </div>
+            <div
+              className={`image-container ${loaded ? ' loaded' : ''}`}
+            >
               {project.imageArray.map((imagePath) => (
-                <a href={imagePath} target="_blank" rel="noreferrer">
+                <a
+                  key={imagePath}
+                  href={imagePath}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img
                     key={imagePath}
                     src={imagePath}

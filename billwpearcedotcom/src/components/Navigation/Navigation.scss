@@ -70,6 +70,10 @@
     width: 75px;
     height: auto;
   }
+  .active-scroll-spy::before {
+    content: '';
+  }
+
 }
 
 .mobile-sticky-nav {

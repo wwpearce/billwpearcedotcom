@@ -13,7 +13,7 @@
   justify-content: flex-end;
   align-items: center;
   opacity: 0;
-  transition: right 0.3s ease, opacity 0.3s ease;
+  transition: right 0.3s $easeOut, opacity 0.3s $easeOut;
 }
 
 .modal-content {
@@ -29,8 +29,12 @@
     margin-top: 1em;
   }
   h1 a {
-    color: initial;
-    text-decoration: none;
+    // color: initial;
+    // text-decoration: none;
+      transition: opacity 0.2s $easeOut;
+    &:hover {
+      opacity: .85;
+    }
   }
   p {
     margin-top: 30px;
@@ -41,8 +45,21 @@
   right: 0; /* Slide the overlay in from the right */
   opacity: 1;
   margin-top: 0;
+  .loader {
+    opacity: 1;
+    transition: opacity 0.3s $easeOut;
+    &.loaded {
+      opacity: 0;
+      display: none;
+    }
+  }
   .image-container {
     display: flex;
+    opacity: 0;
+    transition: opacity 0.3s $easeOut;
+    &.loaded {
+      opacity: 1;
+    }
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -104,10 +121,50 @@
     }
   }
   .modal-tag-container {
-     button {
+    button {
       margin: 0 0.5em 0.5em 0;
       background-color: black;
       color: white;
     }
   }
 }
+
+.modal-tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 5rem; /* Set the maximum height to two rows of tags */
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.3s $easeOut;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1.5rem; /* Set the height of the gradient */
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      #fff
+    ); /* Add a gradient to the bottom of the container */
+    opacity: 1;
+    transition: opacity 0.3s $easeOut;
+    @include devices(widescreen) {
+    opacity: 0;
+  }
+  }
+
+  &.expanded, &.short {
+    max-height: unset; /* Remove the maximum height on the expanded state */
+    transition-timing-function: $easeOut;
+
+    &::after {
+      opacity: 0; /* Set the opacity to 0 */
+      transition-timing-function: $easeOut;
+    }
+  }
+}
+
+

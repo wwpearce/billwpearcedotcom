@@ -118,3 +118,16 @@
     }
   }
 }
+
+@media only screen and (min-width: $mobile-min-width) and (max-width: $tablet-max-width) and (orientation: landscape) {
+  /* Your styles here */
+  .Services {
+        padding: 60px 0px;
+    .services-wrapper {
+      // .services-svg {
+      //   width: auto;
+      //   height: 100px;
+      // }
+    }
+  }
+}

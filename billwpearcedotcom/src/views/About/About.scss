@@ -60,6 +60,7 @@
   }
   @include devices(desktop) {
     width: auto;
+    padding: 90px;
     // height: 450px;
     .copy-wrapper {
       width: 575px;
@@ -71,12 +72,14 @@
   }
   @include devices(widescreen) {
     // height: 500px;
+    padding: 100px;
     svg {
       height: 500px;
     }
   }
   @include devices(fullhd) {
     // height: 550px;
+    padding: 160px;
     svg {
       height: 550px;
     }
