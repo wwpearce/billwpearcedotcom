@@ -4,6 +4,7 @@ import Modal from '../../components/Modal/Modal';
 import Button from '../../components/Button/Button';
 
 import { ReactComponent as WorkScripSVG } from '../../img/Work-02.svg';
+import { Link } from 'react-router-dom';
 
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -13,6 +14,43 @@ const Portfolio = () => {
   // #️⃣
   // Sample project data with tags
   const projects = [
+    {
+      id: 5,
+      title: 'Tea Lady',
+      description:
+        'Ongoing work as a creative consultant, designer, developer, and illustrator.',
+      imageUrl: '/thumbs/thumbs--tealady.jpg',
+      linkUrl: 'https://www.tealadybk.com/',
+      imageArray: [
+        '/img/portfolio/tea-lady/new/img-13.jpg',
+        '/img/portfolio/tea-lady/new/img-12.jpg',
+        '/img/portfolio/tea-lady/new/img-11.jpg',
+        '/img/portfolio/tea-lady/new/img-10.jpg',
+        '/img/portfolio/tea-lady/new/img-9.jpg',
+        '/img/portfolio/tea-lady/new/img-8.jpg',
+        '/img/portfolio/tea-lady/new/img-7.jpg',
+        '/img/portfolio/tea-lady/img-0.jpg',
+        '/img/portfolio/tea-lady/img-1.png',
+        '/img/portfolio/tea-lady/img-2.png',
+        '/img/portfolio/tea-lady/img-3.png',
+        '/img/portfolio/tea-lady/img-4.jpg',
+        '/img/portfolio/tea-lady/img-5.jpg',
+        '/img/portfolio/tea-lady/img-6.jpg',
+      ],
+      tags: [
+        'Design',
+        'Creative Direction',
+        'Development',
+        'Illustration',
+        'Typography',
+        'Web Design',
+        'Web Development',
+        'Shopify Development',
+        'Logo Design',
+        'Hand Lettering',
+        'Pattern Making',
+      ],
+    },
     {
       id: 1,
       title: 'Football Café',
@@ -105,35 +143,6 @@ const Portfolio = () => {
       ],
     },
     {
-      id: 5,
-      title: 'Tea Lady',
-      description: 'Ongoing work as a consultant Creative Director',
-      imageUrl: '/thumbs/thumbs--tealady.jpg',
-      linkUrl: 'https://www.tealadybk.com/',
-      imageArray: [
-        '/img/portfolio/tea-lady/img-0.jpg',
-        '/img/portfolio/tea-lady/img-1.png',
-        '/img/portfolio/tea-lady/img-2.png',
-        '/img/portfolio/tea-lady/img-3.png',
-        '/img/portfolio/tea-lady/img-4.jpg',
-        '/img/portfolio/tea-lady/img-5.jpg',
-        '/img/portfolio/tea-lady/img-6.jpg',
-      ],
-      tags: [
-        'Design',
-        'Creative Direction',
-        'Development',
-        'Illustration',
-        'Typography',
-        'Web Design',
-        'Web Development',
-        'Shopify Development',
-        'Logo Design',
-        'Hand Lettering',
-        'Pattern Making',
-      ],
-    },
-    {
       id: 6,
       title: 'Forrest & Groves',
       description: '',
@@ -189,31 +198,6 @@ const Portfolio = () => {
       ],
       tags: ['Design', 'Identity', 'Logo Design', 'Typography'],
     },
-    // {
-    //   id: 9,
-    //   title: 'Diamondheart Muay Thai',
-    //   description: '',
-    //   linkeUrl: 'https://physicalculturecollective.com/',
-    //   imageUrl: '/thumbs/thumbs--diamond_heart.jpg',
-    //   imageArray: [
-    //     '/img/portfolio/noonehome/mobile-1.jpg',
-    //     '/img/portfolio/noonehome/mobile-2.jpg',
-    //     '/img/portfolio/noonehome/mobile-3.jpg',
-    //     '/img/portfolio/noonehome/mobile-4.jpg',
-    //     '/img/portfolio/noonehome/img-1.jpg',
-    //     '/img/portfolio/noonehome/img-2.jpg',
-    //     '/img/portfolio/noonehome/img-3.jpg',
-    //     '/img/portfolio/noonehome/img-4.jpg',
-    //   ],
-    //   tags: [
-    //     'Design',
-    //     'Illustration',
-    //     'Typography',
-    //     'Poster Design',
-    //     'Hand Lettering',
-    //   ],
-    // },
-    // Add more projects with tags as needed
   ];
 
   // Create a set of unique tags from the projects
@@ -251,6 +235,14 @@ const Portfolio = () => {
     toggleTag(tag);
   };
 
+  const formatTitle = (title) => {
+    return title
+      .normalize('NFD') // remove accents
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase() // convert to lowercase
+      .replace(/\s+/g, '_'); // replace spaces with underscores
+  };
+
   return (
     <div className="portfolio-inner-wrapper">
       <WorkScripSVG className="animate-svg script-svg" />
@@ -279,14 +271,18 @@ const Portfolio = () => {
       </div>
       <div className="portfolio-grid">
         {filteredProjects.map((project) => (
-          <div
+          <Link
+            to={{
+              // pathname: `/portfolio/${formatTitle(project.title)}`,
+              state: { modal: true },
+            }}
             key={project.id}
             className="project-card"
             onClick={() => handleProjectClick(project)}
             style={{ backgroundImage: `url(${project.imageUrl})` }}
           >
             <h3>{project.title}</h3>
-          </div>
+          </Link>
         ))}
       </div>
       {selectedProject && (
